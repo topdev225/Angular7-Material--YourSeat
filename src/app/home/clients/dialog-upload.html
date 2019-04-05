@@ -1,0 +1,169 @@
+<div class="titleCover">
+        <h1 mat-dialog-title class="dialogtitle">Upload</h1>
+        <mat-icon class="closeIcon" (click)="onNoClick()">close</mat-icon>
+      </div>
+      
+      <div mat-dialog-content>
+      
+        <form id="permissionform" [formGroup]="uploadForm" (ngSubmit)="UploadDoc()">
+          <br>
+          <div fxLayout="row" fxLayout.xs="column">
+            <div fxFlex="50%;">
+              <label class="labelClassForField" for="document"> DOCUMENT </label>
+              <mat-form-field appearance="outline" class="full-width">
+                <!-- <mat-select [(value)]="selectedDocument" tabindex="15" placeholder="Survey Response">
+                  <mat-option value="option1">Document Type 1</mat-option>
+                  <mat-option value="option2">Document Type 2</mat-option>
+                  <mat-option value="option3">Document Type 3</mat-option>
+                </mat-select> -->
+                <mat-select [(value)]="selectedDocumment" [disableOptionCentering]="true" tabindex="15" placeholder="Survey Response">
+                    <mat-optgroup label="Document Company">
+                      <mat-option value="option1">Document Type 1</mat-option>
+                      <mat-option value="option2">Document Type 2</mat-option>
+                      <mat-option value="option3">Document Type 3</mat-option>
+                    </mat-optgroup>
+                    <mat-optgroup label="Document Company">
+                      <mat-option value="option4">Document Type 1</mat-option>
+                    </mat-optgroup>
+                </mat-select>
+              </mat-form-field>
+            </div>
+            <div fxFlex="50%;">
+              <label class="labelClassForField" for="provider"> PROVIDER </label>
+              <mat-form-field appearance="outline" class="full-width">
+                <mat-select [(value)]="selectedProvider" [disableOptionCentering]="true" tabindex="15" placeholder="Survey Response">
+                    <mat-optgroup label="Provider Company">
+                      <mat-option value="option1">Name of employee at provider</mat-option>
+                      <mat-option value="option2">Name of employee at provider</mat-option>
+                      <mat-option value="option3">Name of employee at provider</mat-option>
+                    </mat-optgroup>
+                    <mat-optgroup label="Provider Company">
+                      <mat-option value="option4">Name of employee at provider</mat-option>
+                    </mat-optgroup>
+                </mat-select>
+              </mat-form-field>
+            </div>
+          </div>
+          <div fxLayout="row" fxLayout.xs="column">
+            <div fxFlex="50%;">
+              <label class="labelClassForField" for="firstname"> CLIENT FIRST NAME </label>
+              <mat-form-field appearance="outline" class="full-width">
+                <input matInput id="firstname" placeholder="" type="text" name="firstname">
+              </mat-form-field>
+            </div>
+      
+            <div fxFlex="50%;">
+              <label class="labelClassForField" for="lastname"> CLIENT LAST NAME </label>
+              <mat-form-field appearance="outline" class="full-width">
+                <input matInput id="lastname" placeholder="" type="text" name="lastname">
+              </mat-form-field>
+            </div>
+          </div>
+      
+          <div fxLayout="row" fxLayout.xs="column">
+            <div fxFlex="50%;">
+              <label class="labelClassForField" for="casemanager"> CASE MANAGER </label>
+              <mat-form-field appearance="outline" class="full-width">
+                <mat-select [disableOptionCentering]="true" [(value)]="selectedcasemanager" tabindex="1">
+                  <mat-option value="option1">Edmenson, Kelly</mat-option>
+                  <mat-option value="option2">Lastname1, firstname1</mat-option>
+                  <mat-option value="option3">Lastname2, firstname2</mat-option>
+                  <mat-option value="option4">Lastname3, firstname3</mat-option>
+                </mat-select>
+              </mat-form-field>
+            </div>
+            <div fxFlex="50%;">
+              <label class="labelClassForField" for="casemanager"> CASE MANAGER </label>
+              <mat-form-field appearance="outline" class="full-width">
+                <mat-select  [disableOptionCentering]="true" [(value)]="selectedcasemanager2" tabindex="2">
+                  <mat-option value="option1">Edmenson, Kelly</mat-option>
+                  <mat-option value="option2">Lastname1, firstname1</mat-option>
+                  <mat-option value="option3">Lastname2, firstname2</mat-option>
+                  <mat-option value="option4">Lastname3, firstname3</mat-option>
+                </mat-select>
+              </mat-form-field>
+            </div>
+          </div>
+      
+          <div fxLayout.xs="column" style="margin-top:6px;">
+      
+            <div fxFlex="50%;">
+              <label class="labelClassForField" for="firstname"> UPLOAD FILES HERE </label>
+              <angular-file-uploader [config]="afuConfig"> </angular-file-uploader>
+            </div>
+      
+            <div fxFlex="50%;" id="progress">
+              <label class="labelClassForField" for="files"> UPLOADED FILES </label>
+              <div class="containerForProgress">
+                <label class="labelClassForField innerLable" for="file1">Real_Survey_Response </label>
+                <mat-progress-bar style="width:70%" mode="determinate" value="40"></mat-progress-bar>
+                <mat-icon [color]="'icon-delete'" (click)="DeleteFile()"> delete_outline </mat-icon>
+                <br />
+                <label class="labelClassForField innerLable" for="file2">Real_Survey_Response </label>
+                <mat-progress-bar style="width:70%" mode="determinate" value="70"></mat-progress-bar>
+                <mat-icon [color]="'icon-delete'" (click)="DeleteFile()"> delete_outline </mat-icon>
+              </div>
+            </div>
+          </div>
+          <div fxLayout.xs="column">
+      
+            <div id="uploadbelow" fxFlex="50%;" style="max-width: calc(50% - 36px) !important; text-align:center;">
+      
+              <div class="orDivClass">
+                <div class="leftlineClass"></div>
+                <span class="orClass">or</span>
+                <div class="rightLineClass"></div>
+              </div>
+              <!-- <button type="button" class="buttonClassUpload">
+                <input type="file">
+                <mat-icon>add</mat-icon> Upload File
+              </button> -->
+              <label class="buttonClassUpload">
+                <input type="file" />
+                <img class="img-upload" src="../../../assets/images/download-1.png" alt="image">
+                <span class="laeblforButton">Upload file</span>
+              </label>
+            </div>
+      
+            <!-- <label class="buttonClassUpload">
+              <input type="file" />
+              <mat-icon>add</mat-icon><span>Custom Upload</span>
+            </label> -->
+      
+            <div fxFlex="50%;"> </div>
+          </div>
+          <br />
+        </form>
+      </div>
+      
+      
+      
+      <!-- 
+      <mat-dialog-actions class="bottomFixed">
+        <button class="buttonClassSubmit" mat-button mat-raised-button (click)="showForm = false"
+          color="primary">Submit</button>
+        <button class="buttonClassSubmit" mat-button (click)="showForm = false">Cancel</button>
+      </mat-dialog-actions> -->
+      
+      <!-- <h1 mat-dialog-title>Upload</h1>
+      <mat-divider></mat-divider>
+      <div mat-dialog-content>
+        <button type="submit" mat-raised-button (click)='showForm = true'>
+          +New Comment
+        </button>
+      
+        <br>
+      
+        <form *ngIf="showForm" [formGroup]="commentForm" (ngSubmit)="addNewComment()">
+          <br>
+          <div>
+            <mat-form-field appearance="outline">
+              <input matInput formControlName="content">
+            </mat-form-field>
+          </div>
+          <div>
+            <button type="submit" mat-raised-button color="primary" >Done</button>
+            <a mat-button (click)="showForm = false">Cancel</a>
+          </div>
+        </form>
+      </div> -->

@@ -1,0 +1,89 @@
+@import '../../shared/styles/variables.sass'
+@import '../../shared/styles/common.sass'
+@import '../../shared/styles/mixins.sass'
+
+.loginmodal-title
+  font-size: 28px
+  font-weight: 300
+  color: $font-color-greyish-brown
+  margin-bottom: 0px
+
+.loginmodal-error-container
+  min-height: 88px
+  display: inline-block
+  width: 100%
+
+  .loginmodal-message
+    padding: 14px 0px
+    color: $font-color-grey
+    font-size: 13px
+    line-height: 18px
+    margin-top: 15px
+
+  .loginmodal-error
+    color: $font-color-red
+    border: 1px solid $font-color-red
+    padding: 14px
+    border-radius: 3px
+    background-color: rgba(229, 11, 62, 0.1)    
+
+.loginmodal-form
+  display: flex
+  flex-direction: column
+
+  label
+    color: $font-color-green-grey
+    text-transform: uppercase
+    font-size: 12px
+    font-weight: 400
+    line-height: 20px
+    margin-top: 8px
+    margin-bottom: 4px
+    display: inline-block
+
+.mat-btn-login
+  position: absolute
+  left: 90px
+  bottom: 80px
+  color: #ffffff
+  background-color: $bg-color-green
+  border: 2px solid $bg-color-green
+  border-radius: 0
+  width: 55%
+  padding: 16px 48px
+  margin: 0 auto
+  font-size: 14px
+  font-weight: normal
+  line-height: 14px
+
+  &:hover
+    background-color: $bg-color-white
+    color: $bg-color-green
+
+.switch-link
+  position: absolute
+  bottom: 40px
+  left: 90px
+  width: 55%
+  color: $font-color-greyish-brown
+  text-align: center
+  line-height: 20px
+  margin: 0 auto
+  margin-top: 20px
+  text-decoration: underline
+  cursor: pointer
+
+.loginmodal-form-input:focus
+  outline: none !important
+
+.login-modal-mat-input
+  background-color: #ffffff !important
+
+  &:focus 
+    outline: none !important
+
+.modal-close-btn
+  position: absolute
+  top: 20px
+  right: 20px
+  cursor: pointer

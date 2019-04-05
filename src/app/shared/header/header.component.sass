@@ -1,0 +1,50 @@
+@import '../styles/variables.sass'
+@import '../styles/mixins.sass'
+
+.header
+  height: 117px
+  background-color: $bg-color-blue
+
+  +mobile
+    height: 180px
+    padding: 24px 0px
+
+
+.header-container
+  max-width: 900px
+  height: 100%
+  margin: 0 auto
+  padding: 0 12px
+  display: flex
+  align-items: center
+  justify-content: space-between
+
+  +mobile
+    display: block
+
+    .logo-container
+      text-align: center
+      padding: 10px
+
+    .button-container
+      width: 210px
+      margin: 0 auto
+
+.mat-btn-login
+  background-color: transparent
+  border: 2px solid $bg-color-green
+  border-radius: 0
+  color: #ffffff
+  font-size: 14px
+  font-weight: bold
+  line-height: 14px
+  padding: 16px 48px
+  display: inline-block
+  cursor: pointer
+
+  &:hover
+    color: #fff
+    background-color: $bg-color-green
+
+  +mobile
+    width: 100%

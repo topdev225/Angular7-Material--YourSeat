@@ -1,0 +1,118 @@
+<app-header (clickLogin)="openLoginModal()"></app-header>
+
+<div class="login-main-container">
+  <div class="section-wrapper bg-light-grey">
+    <div class="main-section section">
+      <div class="section-left">
+        <div class="text-large text-greyish-brown">
+          Your Family First program evaluation, survey design and report
+          building
+        </div>
+        <div class="text-normal text-greyish-brown">
+          A Done-For-You service to measure your programs for Family First
+          compliance
+        </div>
+        <button mat-button [color]="'btn-join'" (click)="openSpeakDialog()">
+          Learn More
+        </button>
+      </div>
+      <div class="section-right">
+        <!-- <img src="assets/images/Illustration@1x.png" srcset="assets/images/Illustration@2x.png 2x,
+                    assets/images/Illustration@3x.png 3x"
+          alt=""> -->
+        <img src="assets/images/homepage-hero-Illustration-v2.svg" alt="" />
+      </div>
+    </div>
+  </div>
+
+  <div class="empty-section"></div>
+
+  <div class="section-wrapper bg-white">
+    <div class="section">
+      <div class="section-left">
+        <img src="assets/images/homepage-section-1.svg" alt="" />
+      </div>
+      <div class="section-right section-text">
+        <div class="text-normal text-bold text-capital text-battleship-grey">
+          Program Evaluation
+        </div>
+        <div class="text-large text-greyish-brown">
+          Creating Evidence-based Goals
+        </div>
+        <div class="text-small text-battleship-grey">
+          Our internal experts can build your <br />program evaluation
+        </div>
+        <!-- <a href="#"><span class="text-bold">Learn More &rarr;</span></a> -->
+      </div>
+    </div>
+  </div>
+
+  <div class="section-wrapper bg-light-grey">
+    <div class="section reversed">
+      <div class="section-left section-text">
+        <div class="text-normal text-bold text-capital text-battleship-grey">
+          Survey Design
+        </div>
+        <div class="text-large text-greyish-brown">
+          Measuring for Behavior Change
+        </div>
+        <div class="text-small text-battleship-grey">
+          Let our experts handle building your surveys with
+          <span class="no-wrap">up-to-date </span>Family First requirements
+        </div>
+        <!-- <a href="#">Learn More &rarr;</a> -->
+      </div>
+      <div class="section-right">
+        <img src="assets/images/homepage-section-2.svg" alt="" />
+      </div>
+    </div>
+  </div>
+
+  <div class="section-wrapper bg-white">
+    <div class="section">
+      <div class="section-left">
+        <img src="assets/images/homepage-section-3.svg" alt="" />
+      </div>
+      <div class="section-right section-text">
+        <div class="text-normal text-bold text-capital text-battleship-grey">
+          Report Building
+        </div>
+        <div class="text-large text-greyish-brown">Integrating Feedback</div>
+        <div class="text-small text-battleship-grey">
+          Family First required Pre-program, Action Plans, Quasi-experimentation
+          methodologies and many other reports are now provided for you without
+          hiring additional staff!
+        </div>
+        <!-- <a href="#">Learn More &rarr;</a> -->
+      </div>
+    </div>
+  </div>
+
+  <div class="section-wrapper bg-light-grey">
+    <div class="section reversed">
+      <div class="section-left section-text">
+        <div class="text-normal text-bold text-capital text-battleship-grey">
+          Progress Tracking
+        </div>
+        <div class="text-large text-greyish-brown">
+          Viewing Client Improvement
+        </div>
+        <div class="text-small text-battleship-grey">
+          Our custom software holds all your Family First compliance material
+          and helps you conduct deeper dives into clients' journeys
+        </div>
+        <!-- <a href="#">Learn More &rarr;</a> -->
+      </div>
+      <div class="section-right">
+        <img src="assets/images/homepage-section-4.svg" alt="" />
+      </div>
+    </div>
+  </div>
+
+  <div class="mini-section">
+    <button mat-button [color]="'btn-join'" (click)="openSpeakDialog()">
+      Join Pilot Program
+    </button>
+  </div>
+</div>
+<app-footer></app-footer>

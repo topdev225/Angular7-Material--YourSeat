@@ -1,0 +1,17 @@
+Every page must be pixel perfect same with this url.
+
+app login detail:
+email: chad.smith@yourseat.co
+pwd: password
+
+slide 1 ------ https://projects.invisionapp.com/d/main#/console/16710570/346504196/inspect
+slide 2 ------ https://projects.invisionapp.com/d/main#/console/16710570/346504215/inspect
+slide 3 ------ https://projects.invisionapp.com/d/main#/console/16710570/346504212/inspect
+slide 4 ------ https://projects.invisionapp.com/d/main#/console/16710570/346504211/inspect
+slide 5 ------ https://projects.invisionapp.com/d/main#/console/16710570/346504492/inspect
+slide 6 ------ https://projects.invisionapp.com/d/main#/console/16710570/346504491/inspect
+slide 7 ------ https://projects.invisionapp.com/d/main#/console/16710570/346504685/inspect
+slide 8 ------ https://projects.invisionapp.com/d/main#/console/16710570/346853091/inspect
+slide 9 ------ https://projects.invisionapp.com/d/main#/console/16710570/346853091/inspect
+
+graciousbarnett@outlook.com

@@ -1,0 +1,41 @@
+.titleCover {
+    font-family: Roboto;
+    background-color: #0A9CDF;
+    padding: 5px 25px;
+}
+
+.dialogtitle {
+    color: #FFFFFF;
+    font-family: Roboto;
+    font-size: 28px;
+    padding: 18px 0px 0px 0px;
+    font-weight: 400;
+}
+
+.closeIcon {
+    float: right;
+    margin-top: -48px !important;
+    color: #fff !important;
+    cursor: pointer;
+}
+
+.savebtn {
+    background-color: #39CB76;
+    color: white;
+    width: 125px;
+    height: 40px;
+    margin-left: 30px;
+}
+
+.btngroup {
+    float: right;
+}
+
+.labelClassForField {
+  color: #9DA0A2;
+  font-family: Roboto;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 16px;
+  width: 90%;
+}

@@ -1,0 +1,267 @@
+.comment-container {
+    padding-left: 10px;
+    border-left: 2px solid black;
+}
+
+/*Timeline CSS code*/
+
+ul.timeline {
+    list-style-type: none;
+    position: relative;
+}
+
+ul.timeline:before {
+    content: ' ';
+    background: #d4d9df;
+    display: inline-block;
+    position: absolute;
+    left: 29px;
+    width: 2px;
+    height: 100%;
+    z-index: 400;
+}
+
+ul.timeline>li {
+    margin: 20px 0;
+    padding-left: 20px;
+}
+
+ul.timeline>li:before {
+    content: ' ';
+    /* background: white; */
+    display: inline-block;
+    position: absolute;
+    border-radius: 50%;
+    /* border: 3px solid #22c0e8; */
+    left: 20px;
+    width: 20px;
+    height: 20px;
+    z-index: 400;
+}
+
+ul.timeline>li.timeline-success:before {
+    content: ' ';
+    background: dimgray;
+    display: inline-block;
+    position: absolute;
+    border-radius: 50%;
+    border: 3px solid dimgray;
+    left: 20px;
+    width: 20px;
+    height: 20px;
+    z-index: 400;
+}
+
+ul.timeline>li.timeline-failure:before {
+    content: ' ';
+    background: #f8d7da;
+    display: inline-block;
+    position: absolute;
+    border-radius: 50%;
+    border: 3px solid #f8d7da;
+    left: 20px;
+    width: 20px;
+    height: 20px;
+    z-index: 400;
+}
+
+.titleCover {
+    font-family: Roboto;
+    background-color: #0A9CDF;
+    padding: 5px 25px;
+    display: inline-block;
+    width: 100%;
+}
+
+.dialogtitle {
+    color: #FFFFFF;
+    font-family: Roboto;
+    font-size: 18px;
+    line-height: 24px;
+    margin-top: 10px;
+    font-weight: 300;
+    margin-bottom: 0px;
+}
+
+#titlediv .closeIcon {
+    float: right;
+    margin: 28px 10px 28px 2px !important;
+    color: #fff !important;
+    cursor: pointer;
+}
+
+.mat-form-field-appearance-outline .mat-form-field-infix {
+    padding: 5px 0 !important;
+}
+
+.dialogSubtitle {
+    color: #FFFFFF;
+    font-family: Roboto;
+    font-size: 28px;
+    line-height: 40px;
+    font-weight: 300;
+}
+
+.buttonClass {
+    height: 45px;
+    padding: 0;
+    width: 153px;
+    font-family: Roboto;
+    border: 1px solid #D6DBDE;
+    border-radius: 3px;
+    /* background-color: #FFF; */
+    background: #fff;
+}
+
+.mat-button-ripple,
+.mat-button-focus-overlay,
+.mat-button-focus-overlay:focus,
+.mat-button-focus-overlay:hover,
+.mat-button-focus-overlay:active {
+    display: none !important;
+}
+
+.mat-button-ripple,
+.buttonClass:hover,
+.buttonClass:active,
+.buttonClass:focus {
+    /* background-color: #FFF; */
+    background: #fff !important;
+}
+
+.dateClass {
+    color: #494949 !important;	
+    font-family: Roboto !important;	
+    font-size: 18px !important;	
+    line-height: 21px !important;
+}
+
+.authorClass {
+    color: #494949 !important;	
+    font-family: Roboto !important;	
+    font-size: 16px !important;	
+    line-height: 20px !important;
+}
+
+.subjectTitleClass {
+    color: #6E7276;	
+    font-family: Roboto;	
+    font-size: 14px;	
+    font-style: italic;
+    margin-top: -8px;
+}
+
+.commentContentClass {
+    color: #0A9CDF;
+    font-family: Roboto;
+    font-size: 14px;
+    line-height: 20px;
+}
+
+.mat-expansion-indicator {
+    position: absolute;
+    left: 15px;
+}
+
+.mat-expansion-panel:not([class*='mat-elevation-z']),
+.mat-expansion-panel:not([class*='mat-elevation-z']) {
+    box-shadow: none !important;
+    padding-bottom: 8px;
+}
+
+.mat-expansion-panel-header {
+    height: 30px !important;
+    padding: 0px !important;
+}
+
+#commentsDivpanel .mat-icon {
+    margin: -5px 8px 0px 0px !important;
+}
+
+.mat-expansion-panel-header:hover,
+.mat-expansion-panel-header:active,
+.mat-expansion-panel-header:focus {
+    background: transparent !important;
+}
+
+.mat-expansion-panel-content {
+    padding: 5px 0px !important;
+}
+
+.mat-expansion-panel-body {
+    padding: 0 8px 0px !important;
+}
+
+.mat-icon {
+    margin: -8px 8px 0px 0px;
+    font-size: 30px;
+    color: #0A9CDF;
+}
+
+.full-width {
+    width: 100%;
+    margin-bottom: -5px;
+}
+
+.half-width {
+    width: 70%;
+    margin-bottom: -5px;
+}
+
+.submitbtn {
+    background-color: #39CB76;
+    color: white;
+    width: 158px;
+    height: 40px;
+    margin-right: 30px;
+}
+
+.labelClassForField {
+    color: #9DA0A2;
+    font-family: Roboto;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 16px;
+    width: 100%;
+}
+
+.mat-dialog-content {
+    max-height: auto;
+}
+
+.mat-dialog-actions {
+    margin-bottom: 0px;
+    border-top: 1px solid rgba(0, 0, 0, 0.14);
+    box-shadow: 0px 0px 0px 0 rgba(0, 0, 0, 0.3);
+}
+
+.bottomFixed {
+    display: inline-block;
+    width: 100%;
+    padding: 15px 40px 10px;
+}
+
+.buttonClassSubmit {
+    float: right;
+    min-width: 150px;
+    height: 40px;
+}
+
+::ng-deep .mat-expansion-panel-body {
+    padding: 0px !important
+}
+
+#commentsDivpanel h1 {
+    color: #494949;	
+    font-family: Roboto;	
+    font-size: 16px;	
+    line-height: 20px;
+    margin-left: 5px;
+}
+#commentsDivpanel p {
+    color: #494949;	
+    font-family: Roboto;	
+    font-size: 14px;	
+    line-height: 20px;
+    margin-left: 5px;
+}

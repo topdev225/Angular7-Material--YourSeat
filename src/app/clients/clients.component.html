@@ -1,0 +1,181 @@
+<div class="clients-component">
+  <div fxLayout="row" fxLayoutAlign="center center">
+    <div fxFlex>
+      <mat-form-field>
+        <mat-select placeholder="Select County">
+          <mat-option *ngFor="let county of counties" [value]="county.id">
+            {{county.name}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+
+    <div fxFlex>
+      <mat-form-field>
+        <mat-select placeholder="Select Agency">
+          <mat-option *ngFor="let agency of agencies" [value]="agency.id">
+            {{agency.name}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+
+    <div fxFlex>
+      <mat-form-field>
+        <mat-select placeholder="Select Program">
+          <mat-option *ngFor="let program of programs" [value]="program.id">
+            {{program.name}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+
+    <div fxFlex>
+      <button mat-raised-button color="accent" (click)='showClientList = true'>
+        <mat-icon>search</mat-icon>
+      </button>
+    </div>
+  </div>
+
+  <div>
+    <button type="submit" mat-raised-button color="primary" (click)='showForm = true'>
+      <mat-icon>add</mat-icon>
+      New
+    </button>
+  </div>
+
+  <div *ngIf="showForm">
+    <div fxLayoutAlign="row">
+      <div fxFlex>
+        <mat-form-field>
+          <input matInput [(ngModel)]="clientForm.firstName" placeholder="First Name">
+        </mat-form-field>
+      </div>
+
+      <div fxFlex>
+        <mat-form-field>
+          <input matInput [(ngModel)]="clientForm.lastName" placeholder="Last Name">
+        </mat-form-field>
+      </div>
+
+      <div fxFlex>
+        <mat-form-field>
+          <input matInput [(ngModel)]="clientForm.middleName" placeholder="Middle Name">
+        </mat-form-field>
+      </div>
+    </div>
+
+    <div fxLayoutAlign="row">
+
+      <div fxFlex>
+        <mat-form-field>
+          <input matInput [(ngModel)]="clientForm.address" placeholder="Address">
+        </mat-form-field>
+      </div>
+
+      <div fxFlex>
+        <mat-form-field>
+          <input matInput [(ngModel)]="clientForm.city" placeholder="City">
+        </mat-form-field>
+      </div>
+
+      <div fxFlex>
+        <mat-form-field>
+          <input matInput [(ngModel)]="clientForm.zipCode" placeholder="Zip Code">
+        </mat-form-field>
+      </div>
+
+    </div>
+
+    <div fxLayoutAlign="row">
+
+      <div fxFlex>
+        <mat-form-field>
+          <mat-select placeholder="State">
+            <mat-option *ngFor="let state of states" [value]="state.id">
+              {{state.name}}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+
+      <div fxFlex>
+        <mat-form-field>
+          <input matInput [(ngModel)]="clientForm.dateOfBirth" placeholder="Date of Birth" [matDatepicker]="picker"
+                 (click)="picker.open()" readonly>
+        </mat-form-field>
+        <mat-datepicker #picker></mat-datepicker>
+      </div>
+
+      <div fxFlex>
+        <mat-form-field>
+          <mat-select placeholder="Program">
+            <mat-option *ngFor="let program of programs" [value]="program.id">
+              {{program.name}}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+    </div>
+
+    <div fxLayoutAlign="row">
+
+      <div fxFlex>
+        <mat-form-field>
+          <mat-select placeholder="Agency">
+            <mat-option *ngFor="let agency of agencies" [value]="agency.id">
+              {{agency.name}}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+
+      <div fxFlex>
+        <mat-form-field>
+          <mat-select placeholder="County">
+            <mat-option *ngFor="let county of counties" [value]="county.id">
+              {{county.name}}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+    </div>
+
+    <br>
+    <br>
+
+    <div fxLayout="row">
+      <div fxFlex>
+        <button type="submit" mat-raised-button color="primary">Done</button>
+      </div>
+      <div fxFlex>
+        <a mat-button (click)='showForm = false'>Cancel</a>
+      </div>
+      <div fxFlex="80"></div>
+    </div>
+
+    <br>
+    <br>
+  </div>
+
+  <div *ngIf="showClientList">
+
+    <div>
+      <mat-expansion-panel *ngFor="let client of clients" [(expanded)]="expandState" hideToggle>
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            {{client.firstName}}, {{client.lastName}}, {{client.middleName[0]}}
+            <br>
+            {{client.address}}, {{client.city}}, {{client.zipCode}}, {{client.state}} | {{client.dateOfBirth}} |
+            {{client.caseId }}
+          </mat-panel-title>
+          <mat-panel-description>
+            <mat-icon>edit</mat-icon>
+          </mat-panel-description>
+        </mat-expansion-panel-header>
+
+      </mat-expansion-panel>
+    </div>
+
+  </div>
+</div>

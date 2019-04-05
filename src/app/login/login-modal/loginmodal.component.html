@@ -1,0 +1,37 @@
+<h2 mat-dialog-title class="loginmodal-title">{{uiData[type].title}}</h2>
+<div class="modal-close-btn" (click)="closeModal()">
+  <mat-icon>clear</mat-icon>
+</div>
+<div class="loginmodal-error-container">
+  <div class="loginmodal-message" *ngIf="uiData[type].defaultMsg">
+    {{uiData[type].defaultMsg}}
+  </div>
+  <div class="loginmodal-message loginmodal-error" *ngIf="error">
+    {{error && error.message}}
+  </div>
+</div>
+<form class="loginmodal-form">
+  <label for="emailFormControl">
+    {{uiData[type].fields[0].label}}
+  </label>
+  <mat-form-field appearance="outline" [ngStyle]="{'font-size.px': 12}" class="loginmodal-form-full-width loginmodal-form-input">
+    <input matInput class="login-modal-mat-input" type="{{uiData[type].fields[0].type}}" placeholder="{{uiData[type].fields[0].placeholder}}" [formControl]="emailFormControl"
+      [errorStateMatcher]="matcher">
+    <!-- <mat-hint>Errors appear instantly!</mat-hint> -->
+    <mat-error *ngIf="emailFormControl.hasError('required')">
+      {{uiData[type].fields[0].errorMsg}}
+    </mat-error>
+  </mat-form-field>
+  <label *ngIf="uiData[type].fields.length >= 2" for="passwordFormControl">
+    {{uiData[type].fields.length >= 2 && uiData[type].fields[1].label}}
+  </label>
+  <mat-form-field *ngIf="uiData[type].fields.length >= 2" appearance="outline" class="loginmodal-form-full-width loginmodal-form-input">
+    <input matInput class="login-modal-mat-input" type="{{uiData[type].fields[1].type}}" placeholder="{{uiData[type].fields[1].placeholder}}" [formControl]="passwordFormControl"
+      [errorStateMatcher]="matcher">
+    <mat-error *ngIf="passwordFormControl.hasError('required')">
+      {{uiData[type].fields[1].errorMsg}}
+    </mat-error>
+  </mat-form-field>
+  <button mat-button [color]="'btn-login'" (click)="onSubmit()">{{uiData[type].btnText}}</button>
+  <div class="switch-link" (click)="switchModal(uiData[type].linkSwitch)">{{uiData[type].linkText}}</div>
+</form>

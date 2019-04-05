@@ -1,0 +1,33 @@
+.confimation-dialog {
+  width: 352px;
+  height: 229px;
+}
+
+.mat-dialog-container {
+  
+}
+
+span {
+  color: #494949;	
+  font-family: Roboto;	
+  font-size: 18px;	
+  line-height: 24px;
+  margin-left:14px;
+}
+
+p {
+  height: 113px;	
+  width: 353px;
+  color: #494949;	
+  font-family: Roboto;	
+  font-size: 14px;	
+  line-height: 19px;
+  margin-left:14px;
+  margin-right:0px;
+  margin-top: 10px;
+}
+.confirmbtn {
+  background-color: #0A9CDF;
+  color: white;
+  float: right;
+}

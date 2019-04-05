@@ -1,0 +1,62 @@
+<div id="titlediv" class="titleCover">
+  <div style="float:left">
+    <h1 mat-dialog-title class="dialogtitle">Client Notes</h1>
+    <p class="dialogSubtitle">R.E.A.L Parenting Class</p>
+  </div>
+  <mat-icon class="closeIcon" (click)="onNoClick()">close</mat-icon>
+</div>
+<!-- <mat-divider></mat-divider> -->
+<div mat-dialog-content>
+
+  <button type="button" mat-button class="buttonClass" (click)="showForm = true">
+    <mat-icon>add</mat-icon>
+    New Comment
+  </button>
+
+  <br>
+  <br>
+  <mat-divider></mat-divider>
+
+  <form *ngIf="showForm === true" [formGroup]="commentForm" (ngSubmit)="addNewComment()">
+    <br>
+    <label class="labelClassForField" for="summaryTitle"> SUMMARY TITLE </label>
+    <mat-form-field appearance="outline" class="half-width">
+      <input matInput required id="summaryTitle" placeholder="" type="text" name="summaryTitle">
+    </mat-form-field>
+
+    <label class="labelClassForField" for="desc1"> LOREM IPSUM DOLOR SIT AMET, CONSECTER ADIPICSING ELIT?
+    </label>
+    <mat-form-field appearance="outline" class="full-width">
+      <textarea matInput id="desc1" placeholder="" type="text" name="textarea1"></textarea>
+    </mat-form-field>
+
+    <label class="labelClassForField" for="desc2"> LOREM IPSUM DOLOR SIT AMET, CONSECTER ADIPICSING ELIT?
+    </label>
+    <mat-form-field appearance="outline" class="full-width">
+      <textarea matInput id="desc2" placeholder="" type="text" name="textarea2"></textarea>
+    </mat-form-field>
+    <button class="submitbtn" mat-button (click)="showForm=false">Submit</button>
+    <a class="cancelbtn" mat-button (click)="showForm=false">Cancel</a>
+  </form>
+
+  <div id="commentsDivpanel" *ngFor="let comment of comments$ | async">
+    <br>
+    <p class="dateClass">{{comment.date | date: formatDate }}</p>
+    <p class="authorClass">{{comment.autor}}</p>
+    <p class="subjectTitleClass">Subject Title</p>
+    <mat-expansion-panel expanded='false' hideToggle="true" (click)="comment.isExpanded = !comment.isExpanded">
+      <mat-expansion-panel-header>
+        <mat-panel-title class="commentContentClass">
+          <mat-icon>{{!comment.isExpanded  ? 'keyboard_arrow_down' : 'keyboard_arrow_up' }}</mat-icon>
+          View more
+        </mat-panel-title>
+      </mat-expansion-panel-header>
+      <h1>{{comment.subtitle1}}</h1>
+      <p>{{comment.content1}}</p>
+      <h1>{{comment.subtitle2}}</h1>
+      <p>{{comment.content2}}</p>
+    </mat-expansion-panel>
+    <mat-divider></mat-divider>
+  </div>
+
+</div>

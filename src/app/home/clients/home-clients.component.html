@@ -1,0 +1,361 @@
+<div class="home-clients-component">
+    <div class="main-container">
+        <div class="search-container">
+            <div class="selects-container">
+                <div fxLayout.lt-md="column" fxLayout.md="row" fxLayoutAlign.xs="center center" fxLayoutAlign.gt-xs="">
+                    <div class="select-wrapper select-client">
+                        <div class="section-text">
+                            CLIENT
+                        </div>
+                        <div fxFlex>
+                            <ng-multiselect-dropdown [placeholder]="'All'" [data]="clientList" [(ngModel)]="selectedClientItems" [settings]="dropdownClientSettings" (onSelect)="onClientItemSelect($event)" (onSelectAll)="onClientSelectAll($event)"></ng-multiselect-dropdown>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="search-button-container">
+                <button mat-button class='btn-search' (click)="openCreateClientDialog()">
+                    <mat-icon>add</mat-icon>
+                    <span>Create Client</span>
+                </button>
+            </div>
+        </div>
+        <mat-card class="no-client-card graphsec">
+            <div class="col-md-12 header-text">
+                <h1>Judy Chicago</h1>
+            </div>
+        </mat-card>
+        <div class="row space-line"></div>
+        <mat-card class="no-client-card graphsec">
+            <div class="row content">
+                <div class="col-md-9 graph-content">
+                    <div class="row heading">
+                        <div class="col-12">
+                            <div class="over-all-heading">
+                                <h3>Overall Score</h3>
+                                <span class="section-text date-range">DATE RANGE</span>
+                                <div class="row button-group col-md-12">
+                                    <div class="button-30">
+                                    <button mat-button color="light"><span>30 Days</span></button>
+                                    </div>
+                                    <div class="dayBtn">
+                                    <button mat-button color="light"><span>60 Days</span></button>
+                                    </div>
+                                    <div class="dayBtn">
+                                    <button mat-button color="light"><span>90 Days</span></button>
+                                    </div>
+                                    <div class="dayBtn">
+                                    <button mat-button color="light"><span>180 Days</span></button>
+                                    </div>
+                                    <div class="dayBtn">
+                                    <button mat-button color="light"><span>1 Year</span></button>
+                                    </div>
+                                    <div class="dayBtn">
+                                    <button mat-button color="light"><span>3 Years</span></button>
+                                    </div>
+                                    <div class="dayBtn">
+                                    <button mat-button color="light"><span>6 Years</span></button>
+                                    </div>
+                                    <div class="dayBtn">
+                                    <button mat-button color="light"><span>9 Years</span></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mt-3 chat">
+                        <div class="col-md-8 col-md-offset-2">
+                            <div class="col-md-4 text-center graphblock">
+                                <h3>POSITIVE</h3>
+                                <circle-progress [percent]="20" [radius]="60" [outerStrokeWidth]="8"
+                                    [innerStrokeWidth]="8" [outerStrokeColor]="'#C2EEDA'" [innerStrokeColor]="'#efefef'"
+                                    [animation]="true" [animationDuration]="300" [space]="-8" [clockwise]="false"
+                                    [showSubtitle]="false"></circle-progress>
+                            </div>
+                            <div class="col-md-4 text-center graphblock">
+                                <h3>NEUTRAL</h3>
+                                <circle-progress [percent]="30" [radius]="60" [outerStrokeWidth]="8"
+                                    [innerStrokeWidth]="8" [outerStrokeColor]="'#efd3e9'" [innerStrokeColor]="'#efefef'"
+                                    [animation]="true" [animationDuration]="300" [space]="-8" [clockwise]="false"
+                                    [showSubtitle]="false"></circle-progress>
+                            </div>
+                            <div class="col-md-4 text-center graphblock">
+                                <h3>NEGATIVE</h3>
+                                <circle-progress [percent]="75" [radius]="60" [outerStrokeWidth]="8"
+                                    [innerStrokeWidth]="8" [outerStrokeColor]="'#faced8'" [innerStrokeColor]="'#efefef'"
+                                    [animation]="true" [animationDuration]="300" [space]="-8" [clockwise]="false"
+                                    [showSubtitle]="false"></circle-progress>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row space-line"></div>
+                    <div class="side-bar">               
+                        <div class="row side-bar-header" style="margin: 0px">
+                            <div class="col-md-8 side-bar-header-text">
+                                <h3 style="font-weight:400;">R.E.A.L Parenting Group</h3>
+                            </div>
+                            <div class="col-md-4 text-right">
+                                <button mat-button style="font-weight: 400 !important; margin-right: 10px" (click)="openDialog()">
+                                    <img src="assets/images/00External link@1x.png" alt="" class="btn-icon">
+                                    View Notes
+                                </button>
+                            </div>
+                            <div class="col-md-12 header-content" style="margin: 0px">
+                                <ul class="navigation-list">
+                                    <li class="page-action" [ngClass]="showInsightFrom === true ? 'page-action-selected' : null" (click)="showInsightFrom=true;showDocumentFrom=false;showDataFrom=false;">
+                                        Insight
+                                    </li>
+                                    <li class="page-action" [ngClass]="showDocumentFrom === true ? 'page-action-selected' : null" (click)="showInsightFrom=false;showDocumentFrom=true;showDataFrom=false;">
+                                        Documents
+                                    </li>
+                                    <li class="page-action" [ngClass]="showDataFrom === true ? 'page-action-selected' : null" (click)="showInsightFrom=false;showDocumentFrom=false;showDataFrom=true;">
+                                        Data
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>               
+                        <form id="showInsightFrom" *ngIf="showInsightFrom">
+                            <div class="row" style="margin: 0px">
+                                <div class="col-md-8 tabContent">                     
+                                    <div class="col-12 margin-text">
+                                        <span class="hr-st-two">Pre-program to End-to-Programs:</span>
+                                        <h5 class="warn-text" style="font-weight: 300">                                   
+                                            <img src="assets/images/Red@1x.png" alt="" class="red-icon">
+                                            Positive decreased by 20% | Below average by 12%
+                                        </h5>
+                                    </div>
+                                    <div class="col-12 verified-checkbox">
+                                        <mat-checkbox color="primary" [(ngModel)]="verified" (change)="openConfirmDialog()" name="verifed">
+                                            <span style="font-weight:300;">Verified</span>
+                                        </mat-checkbox>
+                                    </div>
+
+                                    <div class="col-12 mt-5">
+                                        <span>End-of-Program to 6 months:</span>
+                                        <h5 class="mt-2 month-text">No data available</h5>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </form>
+                        <form id="showDocumentFrom" *ngIf="showDocumentFrom">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="col-12 survey-text-margin">
+                                        <span class="survey-text">Pre-program Survey</span>
+                                    </div>
+                                    <button mat-button class="pd-x20 upload-part" (click)="openUploadDialog()">
+                                        <img class="img-upload" src="../../../assets/images/download-1.png" alt="image">
+                                        <span>Upload file</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                        <form id="showDataFrom" *ngIf="showDataFrom">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="col-md-12 survey-text-margin" style="margin-left: 0px">
+                                        <span class="survey-text">Pre-program Survey:</span>
+                                        <mat-icon class="edit-icon" (click)="showScoreEditForm=true;showScoreForm=false">create</mat-icon>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <form id="showScoreForm" *ngIf="showScoreForm">
+                                            <div fxLayout="row" fxLayout.xs="column">
+                                                <div fxFlex="25%;">
+                                                    <label class="labelClassForField" for="currentmanager">POSITIVE %</label>
+                                                    <span class="subtext">70%</span>
+                                                </div>
+                                                <div fxFlex="25%;">
+                                                    <label class="labelClassForField" for="currentmanager">NETURAL %</label>
+                                                    <span class="subtext">20%</span>
+                                                </div>
+                                                <div fxFlex="25%;">
+                                                    <label class="labelClassForField" for="currentmanager">NEGATIVE %</label>
+                                                    <span class="subtext">10%</span>
+                                                </div>
+                                            </div>
+                                        </form>
+                                        <form id="showScoreEditForm" *ngIf="showScoreEditForm">
+                                            <div fxLayout="row" fxLayout.xs="column">
+                                                <div fxFlex="30%;" fxLayout="column">
+                                                    <label class="labelClassForField" for="currentmanager">POSITIVE %</label>
+                                                    <mat-form-field appearance="outline" class="full-width">
+                                                        <input matInput id="positive" placeholder="" type="text" name="positive">
+                                                    </mat-form-field>
+                                                </div>
+                                                <div fxFlex="5%;" fxLayout="column"></div>
+                                                <div fxFlex="30%;" fxLayout="column">
+                                                    <label class="labelClassForField" for="currentmanager">NETURAL %</label>
+                                                    <mat-form-field appearance="outline" class="full-width">
+                                                        <input matInput id="neutral" placeholder="" type="text" name="neutral">
+                                                    </mat-form-field>
+                                                </div>
+                                                <div fxFlex="5%;" fxLayout="column"></div>
+                                                <div fxFlex="30%;" fxLayout="column">
+                                                    <label class="labelClassForField" for="currentmanager">NEGATIVE %</label>
+                                                    <mat-form-field appearance="outline" class="full-width">
+                                                        <input matInput id="negative" placeholder="" type="text" name="negative">
+                                                    </mat-form-field>
+                                                </div>
+                                            </div>
+                                            <div fxLayout="row" fxLayout.xs="column" class="scorebtngroup">
+                                                <a class="cancelscorebtn" mat-button (click)="showScoreEditForm=false;showScoreForm=true">Cancel</a>
+                                                <button class="savescorebtn" mat-button (click)="showScoreEditForm=false;showScoreForm=true">Save</button>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-md-1 br-lf space-fix-vertical"></div>
+                <div class="col-md-3 br-lf right-form">
+                    <form id="showDefaultForm" *ngIf="showDefaultForm">
+                        <br>
+                        <div fxLayout="row" fxLayout.xs="column">
+                            <div fxFlex="100%;">
+                                <label class="labelClassForField" for="currentmanager">CURRENT CASE MANAGER</label>
+                                <mat-form-field appearance="outline" class="full-width">
+                                    <input matInput id="currentmanager" placeholder="" type="text" name="currentmanager"
+                                        value="Linda Smith">
+                                </mat-form-field>
+                            </div>
+                        </div>
+                        <div fxLayout="row" fxLayout.xs="column">
+                            <div fxFlex="100%;">
+                                <label class="labelClassForField" for="phonenum">PHONE NUMBER</label>
+                                <mat-form-field appearance="outline" class="full-width">
+                                    <input matInput id="phonenum" placeholder="" type="text" name="phonenum"
+                                        value="(540) 382-6990">
+                                </mat-form-field>
+                            </div>
+                        </div>
+
+                        <div fxLayout="row" fxLayout.xs="column">
+                            <div fxFlex="100%;">
+                                <label class="labelClassForField" for="extension">EXTENSION</label>
+                                <mat-form-field appearance="outline" class="full-width">
+                                    <input matInput id="extension" placeholder="" type="text" name="extension"
+                                        value="x53488">
+                                </mat-form-field>
+                            </div>
+                        </div>
+
+                        <div fxLayout="row" fxLayout.xs="column">
+                            <div fxFlex="100%;">
+                                <label class="labelClassForField" for="email">EMAIL</label>
+                                <mat-form-field appearance="outline" class="full-width">
+                                    <input matInput id="email" placeholder="yourname@example.com" type="text"
+                                        name="email" value="linda.smith@dss.virginia.gov">
+                                </mat-form-field>
+                            </div>
+                        </div>
+
+                        <div fxLayout="row" fxLayout.xs="column">
+                            <div fxFlex="100%;">
+                                <label class="labelClassForField" for="address">ADDRESS</label>
+                                <mat-form-field appearance="outline" class="full-width">
+                                    <input matInput id="address" placeholder="" type="text" name="address"
+                                        value="12345 Circle Oak Way">
+                                </mat-form-field>
+                            </div>
+                        </div>
+                        <div fxLayout="row" fxLayout.xs="column">
+                            <div fxFlex="100%;">
+                                <label class="labelClassForField" for="city">CITY</label>
+                                <mat-form-field appearance="outline" class="full-width">
+                                    <input matInput id="city" placeholder="" type="text" name="city" value="Bethesda">
+                                </mat-form-field>
+                            </div>
+                        </div>
+                        <div fxLayout="row" fxLayout.xs="column">
+                            <div fxFlex="34%;" fxLayout="column" style="margin-right:32px">
+                                <label class="labelClassForField" for="state">STATE</label>
+                                <mat-form-field appearance="outline" class="full-width">
+                                    <mat-select [(value)]="selected" placeholder="MD">
+                                        <mat-option value="option1">MD</mat-option>
+                                        <mat-option value="option2">GA</mat-option>
+                                        <mat-option value="option3">MA</mat-option>
+                                        <mat-option value="option4">ME</mat-option>
+                                    </mat-select>
+                                </mat-form-field>
+                            </div>
+                            <div fxFlex="35%;" fxLayout="column">
+                                <label class="labelClassForField" for="zipcode">ZIPCODE</label>
+                                <mat-form-field appearance="outline" class="full-width">
+                                    <input matInput id="zipcode" placeholder="" type="text" name="zipcode"
+                                        value="20810">
+                                </mat-form-field>
+                            </div>
+                        </div>
+                        <div fxLayout="row" fxLayout.xs="column">
+                            <button class="savebtn" mat-button
+                                (click)="showDefaultForm=false;showEditForm=true">Save</button>
+                            <a class="cancelbtn" mat-button (click)="showDefaultForm=false;showEditForm=true">Cancel</a>
+                        </div>
+                        <br />
+                        <span>LASTEST NOTES</span>
+                        <span>
+                            <p>
+                                Linda seems to be enjoying the Parenting Class.
+                                She likes being able to express her genuine feelings in an open setting.
+                                And know she being heard, while also knowing she's in a space where she can learn or
+                                thing too.Nobody is a perfect parent and Linda's realizing this.
+                                Incredibly happy she's getting what she needs.</p>
+                        </span>
+                    </form>
+                    <form id="showEditForm" *ngIf="showEditForm">
+                        <br>
+                        <div fxLayout="row" fxLayout.xs="column">
+                            <div fxFlex="100%;">
+                                <label class="labelClassForField" for="currentmanager">CURRENT CASE MANAGER</label>
+                                <mat-icon class="edit-icon" (click)="showDefaultForm=true;showEditForm=false">create
+                                </mat-icon>
+                                <span class="subtext">Linda Smith</span>
+                            </div>
+                        </div>
+                        <br />
+                        <div fxLayout="row" fxLayout.xs="column">
+                            <div fxFlex="100%;">
+                                <label class="labelClassForField" for="phonenum">PHONE NUMBER</label>
+                                <span class="subtext">(540) 382-6990, x53488</span>
+                            </div>
+                        </div>
+                        <br />
+                        <div fxLayout="row" fxLayout.xs="column">
+                            <div fxFlex="100%;">
+                                <label class="labelClassForField" for="email">EMAIL</label>
+                                <span class="subtext">linda.smith@dss.virginia.gov</span>
+                            </div>
+                        </div>
+                        <br />
+                        <div fxLayout="row" fxLayout.xs="column">
+                            <div fxFlex="100%;">
+                                <label class="labelClassForField" for="address">ADDRESS</label>
+                                <span class="addresstext">12345 Circle Oak Way<br>Bethesda, MD 20810</span>
+                            </div>
+                        </div>
+
+                        <br />
+                        <span style="font-size:12px;">LASTEST NOTES</span>
+                        <span>
+                            <p style="font-weight:400;">
+                                Linda seems to be enjoying the Parenting Class. She likes being able to express her
+                                genuine feelings in an open setting, and know she's being heard; while also knowing
+                                she's in a space where she can learn or thing too. Nobody is a perfect parent and
+                                Linda's realizing this. Incredibly happy she's getting what she needs</p>
+                        </span>
+                        <div fxLayout="row" fxLayout.xs="column" class="kinshipdiv">
+                            <button mat-button>
+                                <!-- <img src="assets/images/External link@1x.png" alt="" class="btn-icon"> -->
+                                <img src="assets/images/00External link@1x.png" alt="" class="btn-icon">
+                                View Notes
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </mat-card>
+    </div>
+</div>

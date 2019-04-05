@@ -1,0 +1,13 @@
+{
+  schema: {
+    files: 'src/**/*.graphql
+  },
+  query: {
+    files: [ /* define file paths which you'd like the gql parser to watch and give autocomplete suggestions for */      
+      {
+        match: 'src/**/*.graphql',
+        parser: 'QueryParser',
+      },
+    ],
+  },
+}

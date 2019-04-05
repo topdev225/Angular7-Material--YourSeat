@@ -1,0 +1,174 @@
+@import '../shared/styles/variables.sass'
+@import '../shared/styles/common.sass'
+@import '../shared/styles/mixins.sass'
+
+.section
+  display: flex
+  flex-direction: row
+  align-items: center
+  justify-content: center
+  max-width: 975px
+  margin: 0 auto
+  padding: 30px 50px
+
+  div
+    margin-bottom: 8px
+
+  .section-left
+    margin-right: 20px
+
+  .section-right
+    margin-left: 20px
+
+  .section-text
+    width: 50%
+
+  img
+    max-width: 100%
+    width: 350px
+    padding: 15px
+
+  a
+    display: inline-block
+    margin-top: 28px
+
+  +mobile
+    flex-direction: column
+    text-align: center
+    padding: 30px 15px
+
+    &.reversed
+      .section-left
+        order: 2
+
+    .section-text
+      width: 100%
+
+    img
+      width: 70%
+
+    .section-left
+      margin: 0
+
+    .section-right
+      margin: 0
+
+.empty-section
+  width: 100%
+  height: 69px
+  background-color: $bg-color-blue
+
+.mini-section
+  padding: 23px 0
+  background-color: $bg-color-blue
+  color: #ffffff
+  text-align: center
+
+  .text-normal
+    font-size: 18px
+
+    +mobile
+      padding: 0 15px
+
+  button
+    margin-top: 30px
+
+.main-section
+  padding-top: 56px
+  padding-bottom: 36px
+  align-items: flex-start
+
+  div
+    margin-bottom: 36px
+
+  .text-large
+    font-size: 28px
+    font-weight: 300
+    line-height: 40px
+    letter-spacing: 0
+    margin-right: -40px
+
+  .text-normal
+    font-size: 18px
+    font-weight: 300
+    line-height: 30px
+    max-width: 350px
+
+  .section-left
+    padding-top: 20px
+    margin: 0
+    margin-left: 35px
+    width: 37%
+
+  .section-right
+    margin: 0
+
+    img 
+      width: 518px
+      padding: 0
+
+  +smallTablet
+    padding: 30px 35px
+    .section-left
+      margin: 0
+      z-index: 1
+
+      .text-large
+        margin-right: -150px
+
+      .text-normal
+        margin-right: -50px
+
+    .section-right
+      left: 0
+      bottom: -20px
+
+  +mobile
+    display: block
+    padding: 60px 15px
+    .section-left
+      z-index: 1
+      margin: 0
+      width: 100%
+
+      .text-large
+        margin-right: 0px
+
+      .text-normal
+        margin-right: 0px
+
+    .section-right
+      display: none
+
+.bg-white
+  background-color: $bg-color-white
+
+.bg-light-grey
+  background-color: $bg-color-light-grey
+
+.mat-btn-join
+  min-width: 210px
+  color: #ffffff
+  background-color: $bg-color-green
+  border: 2px solid #39cb76
+  border-radius: 0
+  padding: 16px 48px
+  font-size: 14px
+  font-weight: bold
+  line-height: 14px
+
+  &:hover
+    background-color: $bg-color-white
+    color: $bg-color-green
+
+button
+  padding: 0 40px
+
+.img-padding
+  padding: 30px
+
+.text-small
+  max-width: 340px
+
+.no-wrap
+  white-space: nowrap

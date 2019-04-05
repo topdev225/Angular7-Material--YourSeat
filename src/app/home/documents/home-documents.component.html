@@ -1,0 +1,78 @@
+<div class="home-documents-component">
+  <div class="main-container">
+    <div class="search-container">
+      <div class="selects-container">
+        <div fxLayout.lt-md="column" fxLayout.md="row" fxLayoutAlign.xs="center center" fxLayoutAlign.gt-xs="">
+          <div class="select-wrapper select-programs">
+            <div class="section-text">
+              PROGRAMS
+            </div>
+            <div fxFlex>
+              <!-- <select [(ngModel)]="selectedClient" class="client-select">
+                <option [ngValue]="undefined" selected disabled>R.E.A.L Parenting Group</option>
+                <option *ngFor="let program of programs" [ngValue]="program" selected>
+                  {{program.name}}
+                </option>
+              </select> -->
+                <!-- <mat-select  class="client-select" placeholder="R.E.A.L Parenting Group" multiple>
+                  <mat-option *ngFor="let program of programs" [value]="program">{{program.name}}</mat-option>
+                </mat-select> -->
+                <ng-multiselect-dropdown [placeholder]="'R.E.A.L. Parenting Group'" [data]="programList" [(ngModel)]="selectedProgramItems" [settings]="dropdownProgramSettings" (onSelect)="onProgramItemSelect($event)" (onSelectAll)="onProgramSelectAll($event)"></ng-multiselect-dropdown>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="search-button-container">
+        <button mat-button [color]="'btn-search'" (click)="search()">
+          <img class="icon-home" src="assets/images/search.svg" alt="" />
+          <span>Search</span>
+        </button>
+      </div>
+    </div>
+    <hr style="margin: 0px 0px 20px 0px; border-top: 1px solid #D6DBDE">
+    <mat-card class="chat-box-wrap">
+      <div class="row permissions-part">
+        <div class="col-md-6">
+          <div class="pd-x20">
+            <h1 class="mrg-t15">R.E.A.L. Parenting Group</h1>
+          </div>
+        </div>
+        <div class="col-md-6 text-right">
+          <div class="pd-x20 upload-part">
+            <button mat-raised-button color="light" class="uploadbtn" (click)="openUploadDialog()">
+              <img class="img-upload" src="../../../assets/images/download-1.png" alt="image">
+              <span>Upload</span>
+            </button>
+          </div>
+        </div>
+      </div>
+      <hr class="mar-0">
+      <div class="row pre-program-part">
+        <h2>Pre-program</h2>
+        <!-- <h5>01/25/2019</h5> -->
+        <div class="document-wrap">
+          <div class="document-list">
+            <p>Surveys</p>
+            <div class="document-link">MCSS Pre-program Survey
+              <a href="#">
+                <img class="img-download" src="../../../assets/images/download.png" alt="image">
+              </a>
+            </div>
+          </div>
+          <div class="document-list">
+            <p>Surveys</p>
+            <div class="document-link">MCSS Pre-program Survey
+              <a href="#">
+                <img class="img-download" src="../../../assets/images/download.png" alt="image">
+              </a>
+            </div>
+          </div>
+          <div class="document-list">
+            <p>Surveys</p>
+            <div class="decible">No survey resposes yet</div>
+          </div>
+        </div>
+      </div>
+    </mat-card>
+  </div>
+</div>

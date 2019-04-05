@@ -1,0 +1,17 @@
+<div class="account-container">
+  <div class="avatar-container">
+    <img class="avatar-icon" src="assets/images/Profile_Image@1x.png" srcset="assets/images/Profile_Image@2x.png 2x, assets/images/Profile_Image@3x.png 3x" />
+  </div>
+  <div class="account-name" fxHide.xs>
+    {{ userName }}
+  </div>
+  <button mat-icon-button [matMenuTriggerFor]="menu" #trigger="matMenuTrigger">
+    <mat-icon>{{trigger?.menuOpen ? 'expand_less' : 'expand_more'}}</mat-icon>
+  </button>
+  <mat-menu #menu="matMenu" xPosition="before" class="menu-width-long">
+    <button mat-menu-item class="avatar-menu-item" (click)="goToAccountPage()">
+      <span>Account</span>
+    </button>
+    <button mat-menu-item class="avatar-menu-item" (click)="logout()"><span>Sign out</span></button>
+  </mat-menu>
+</div>

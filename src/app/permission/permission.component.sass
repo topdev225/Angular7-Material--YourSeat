@@ -1,0 +1,121 @@
+@import '../shared/styles/variables.sass'
+@import '../shared/styles/common.sass'
+@import '../shared/styles/mixins.sass'
+
+.main-container
+  max-width: 1110px
+  margin: 48px auto
+  padding: 0px
+
+  +tablet
+    padding: 0 15px
+
+.title
+  margin-bottom: 27px
+  font-size: 24px
+  color: $font-color-greyish-brown
+  line-height: 31px
+
+.permission-card
+  padding: 20px
+  margin-bottom: 24px
+  border: 1px solid $font-color-powder-blue
+  border-radius: 0
+  box-shadow: none
+
+  .icon-container
+    max-width: 24px
+
+  .element-title
+    font-size: 18px
+    line-height: 24px
+    color: $font-color-battleship-grey
+    padding: 0 50px
+
+  .element 
+    cursor: pointer
+
+
+  .element-description 
+    font-size: 14px
+
+.card-content
+  padding: 30px 75px 4px 75px
+
+  .card-item
+    margin-bottom: 24px
+
+  .card-item-title
+    font-size: 12px
+    line-height: 16px
+    margin-bottom: 8px
+    color: $font-color-green-grey
+
+  .card-input
+    height: 32px
+    border-radius: 3px
+    border: 1px solid $font-color-brown-grey
+    width: 350px
+    padding: 0 16px
+    color: #000000
+
+    &:focus
+      outline: none !important
+
+    &::placeholder
+      color: #d7d7d7
+
+    +mobile 
+      width: 244px
+
+    &.card-input-short
+      width: 304px
+
+      +mobile 
+        width: 244px
+
+  .buttons-container
+    padding-top: 8px
+
+    .cancel-text 
+      font-size: 14px
+      line-height: 20px
+      cursor: pointer
+      color: $font-color-greyish-brown
+      text-decoration: underline
+
+    .update-button 
+      cursor: pointer
+      text-align: center
+      margin-right: 35px
+
+  .card-item-error
+    color: #e50b3e
+    border: 1px solid #e50b3e
+    padding: 14px
+    margin-bottom: 20px
+    border-radius: 3px
+    background-color: rgba(229, 11, 62, 0.1)
+    width: 350px
+
+    +mobile 
+      width: 244px
+
+.mat-icon-edit
+  color: $font-color-battleship-grey
+
+.mat-btn-update
+  width: 155px
+  height: 45px
+  color: #ffffff
+  background-color: $bg-color-green
+  border-radius: 3px
+  padding: 15px 55px
+  font-size: 14px
+  font-weight: 300
+  line-height: 14px
+
+  &:hover
+    background-color: $bg-color-white
+    color: $bg-color-green
+    border: 2px solid $bg-color-green

@@ -1,0 +1,224 @@
+<div class="main-container">
+  <div class="title">
+    Account
+  </div>
+  <mat-card class="account-card">
+    <div class="option-container">
+      <div fxLayout="row" class="element" (click)="toggleForm('email')">
+        <div fxFlex class="icon-container">
+          <mat-icon [color]="'icon-edit'">
+            edit
+          </mat-icon>
+        </div>
+        <div fxFlex="95" fxLayout="column" fxLayoutAlign="center ">
+          <div fxFlex class="element-title">
+            Change email address
+          </div>
+        </div>
+      </div>
+      <div *ngIf="showEmail" class="card-content">
+        <div fxLayout="column">
+          <div class="card-item-error" *ngIf="emailError">
+            {{ emailError.message }}
+          </div>
+          <div class="card-item">
+            <div class="card-item-title">NEW EMAIL</div>
+            <div>
+              <input type="text" class="card-input" placeholder="yourname@example.com" [formControl]="emailFormControl"
+                autocomplete="off">
+            </div>
+          </div>
+          <div class="card-item">
+            <div class="card-item-title">PASSWORD</div>
+            <div>
+              <input type="password" class="card-input" placeholder="" [formControl]="passwordFormControl" autocomplete="new-password">
+            </div>
+          </div>
+          <div class="buttons-container" fxLayout="row" fxLayoutAlign="start center">
+            <div class="update-button">
+              <button mat-button [color]="'btn-update'" (click)="updateEmail()">Submit</button>
+            </div>
+            <div class="cancel-text" (click)="toggleForm('email')">
+              Cancel
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </mat-card>
+
+  <mat-card class="account-card">
+    <div class="option-container">
+      <div fxLayout="row" class="element" (click)="toggleForm('password')">
+        <div fxFlex class="icon-container">
+          <mat-icon [color]="'icon-edit'">
+            edit
+          </mat-icon>
+        </div>
+        <div fxFlex="95" fxLayout="column" fxLayoutAlign="center ">
+          <div fxFlex class="element-title">
+            Change password
+          </div>
+        </div>
+      </div>
+      <div *ngIf="showPassword" class="card-content">
+        <div fxLayout="column">
+          <div class="card-item-error" *ngIf="passwordError">
+            {{ passwordError.message }}
+          </div>
+          <div class="card-item">
+            <div class="card-item-title">CURRENT PASSWORD</div>
+            <div>
+              <input type="password" class="card-input card-input-short" [formControl]="oldPasswordFormControl"
+                autocomplete="off">
+            </div>
+          </div>
+          <div class="card-item">
+            <div class="card-item-title">NEW PASSWORD</div>
+            <div>
+              <input type="password" class="card-input card-input-short" [formControl]="newPasswordFormControl"
+                autocomplete="off">
+            </div>
+          </div>
+          <div class="card-item">
+            <div class="card-item-title">CONFIRM PASSWORD</div>
+            <div>
+              <input type="password" class="card-input card-input-short" [formControl]="confirmPasswordFormControl"
+                autocomplete="off">
+            </div>
+          </div>
+          <div class="buttons-container" fxLayout="row" fxLayoutAlign="start center">
+            <div class="update-button">
+              <button mat-button [color]="'btn-update'" (click)="updatePassword()">Submit</button>
+            </div>
+            <div class="cancel-text" (click)="toggleForm('password')">
+              Cancel
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </mat-card>
+
+  <mat-card class="account-card">
+    <div class="option-container">
+      <div fxLayout="row" class="element" (click)="toggleForm('username')">
+        <div fxFlex class="icon-container">
+          <mat-icon [color]="'icon-edit'">
+            edit
+          </mat-icon>
+        </div>
+        <div fxFlex="95" fxLayout="column" fxLayoutAlign="center ">
+          <div fxFlex class="element-title">
+            Change username
+          </div>
+        </div>
+      </div>
+      <div *ngIf="showUsername" class="card-content">
+        <div fxLayout="column">
+          <div class="card-item-error" *ngIf="usernameError">
+            {{ usernameError.message }}
+          </div>
+          <div class="card-item">
+            <div class="card-item-title">NEW USERNAME</div>
+            <div>
+              <input type="text" class="card-input" [formControl]="usernameFormControl" autocomplete="off">
+            </div>
+          </div>
+          <div class="buttons-container" fxLayout="row" fxLayoutAlign="start center">
+            <div class="update-button">
+              <button mat-button [color]="'btn-update'" (click)="updateUsername()">Submit</button>
+            </div>
+            <div class="cancel-text" (click)="toggleForm('username')">
+              Cancel
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- <mat-divider></mat-divider>
+    <div class="option-container">
+      <div fxLayout="row" class="element" (click)="toggleForm('password')">
+        <div fxFlex="95" fxLayout="column" fxLayoutAlign="center ">
+          <div fxFlex class="element-title">
+            Change password
+          </div>
+          <div fxFlex class="element-description">
+            Choose a unique password to protect your account
+          </div>
+        </div>
+        <div fxFlex>
+          <mat-icon>
+            edit
+          </mat-icon>
+        </div>
+      </div>
+      <div *ngIf="showPassword">
+        <br>
+        <div fxLayout="column">
+          <div>Current Password</div>
+          <div>
+            <input type="text">
+          </div>
+          <br>
+          <div>New Password</div>
+          <div>
+            <input type="text">
+          </div>
+          <br>
+          <div>Retype New Password</div>
+          <div>
+            <input type="text">
+          </div>
+          <br>
+          <div fxLayout="row" fxLayoutAlign=" center">
+            <div class="update-button" fxFlex="10">
+              Update
+            </div>
+            <div fxFlex="2"></div>
+            <div class="cancel-text" (click)="toggleForm('password')">
+              Cancel
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <mat-divider></mat-divider>
+    <div class="option-container">
+      <div fxLayout="row" class="element" (click)="toggleForm('username')">
+        <div fxFlex="95" fxLayout="column" fxLayoutAlign="center ">
+          <div fxFlex class="element-title">
+            Change username
+          </div>
+          <div fxFlex class="element-description">
+            Choose a unique name for your account
+          </div>
+        </div>
+        <div fxFlex>
+          <mat-icon>
+            edit
+          </mat-icon>
+        </div>
+      </div>
+      <div *ngIf="showUsername">
+        <br>
+        <div fxLayout="column">
+          <div>Username</div>
+          <div>
+            <input type="text">
+          </div>
+          <br>
+          <div fxLayout="row" fxLayoutAlign=" center">
+            <div class="update-button" fxFlex="10">
+              Update
+            </div>
+            <div fxFlex="2"></div>
+            <div class="cancel-text" (click)="toggleForm('username')">
+              Cancel
+            </div>
+          </div>
+        </div>
+      </div>
+    </div> -->
+  </mat-card>
+</div>

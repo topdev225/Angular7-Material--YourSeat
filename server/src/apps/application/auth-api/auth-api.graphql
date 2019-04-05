@@ -1,0 +1,7 @@
+type Query {
+  login(username: String!, password: String!): String    
+}
+
+type Mutation {
+  setPassword(password: String!): Boolean
+}

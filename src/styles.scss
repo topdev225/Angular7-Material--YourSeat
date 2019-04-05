@@ -1,0 +1,378 @@
+@import 'yourseat-app-theme.scss';
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i');
+html,
+body {
+    margin: 0;
+    height: 100vh;
+    font-family: Roboto, serif;
+}
+
+html {
+    font-size: 100%;
+}
+
+.spacer {
+    flex: 1 1 auto;
+}
+
+.little-space {
+    width: 15px;
+}
+
+#recommendedprograms {
+    padding: 0;
+}
+
+select {
+    color: #494949 !important;
+    padding-left: 4px;
+    margin-top: 4px;
+}
+
+.date-picker {
+    padding-left: 6px;
+}
+
+.login-modal {
+    .mat-dialog-container {
+        padding: 66px 50px 40px;
+        position: relative;
+        border-radius: 0px;
+        .mat-form-field-infix {
+            padding: 9px !important;
+            border-top-width: 5px !important;
+        }
+        .loginmodal-form-full-width {
+            width: 100%;
+            padding: 0px;
+        }
+        .loginmodal-form-input {
+            font-size: 12px;
+        }
+    }
+}
+
+.mat-form-field-wrapper:focus {
+    outline: none !important;
+}
+
+.mat-form-field-flex:focus {
+    outline: none;
+}
+
+.mat-form-field-outline:focus {
+    outline: none !important;
+}
+
+.mat-form-field-outline-end:focus {
+    outline: none !important;
+}
+
+.mat-form-field-appearance-outline:hover .mat-form-field-outline-thick .mat-form-field-outline-end,
+.mat-form-field-appearance-outline:hover .mat-form-field-outline-thick .mat-form-field-outline-gap,
+.mat-form-field-appearance-outline:hover .mat-form-field-outline-thick .mat-form-field-outline-start {
+    border-width: 1px !important;
+    border-color: #0000001f;
+}
+
+.cdk-overlay-dark-backdrop {
+    background-color: #494949 !important;
+    opacity: 0.75 !important;
+}
+
+mat-toolbar-row.main-container {
+    height: auto;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    box-shadow: 0 0 0 30px white inset !important;
+    -webkit-box-shadow: 0 0 0 30px white inset !important;
+}
+
+.password-reset-container {
+    .form-container {
+        padding: 66px 50px 40px;
+        position: relative;
+        border-radius: 0px;
+        .mat-form-field-wrapper:focus {
+            outline: none !important;
+        }
+        .mat-form-field-flex:focus {
+            outline: none;
+        }
+        .mat-form-field-outline:focus {
+            outline: none !important;
+        }
+        .mat-form-field-outline-end:focus {
+            outline: none !important;
+        }
+        .mat-form-field-infix {
+            padding: 9px !important;
+            border-top-width: 5px !important;
+        }
+        .loginmodal-form-full-width {
+            width: 100%;
+            padding: 0px;
+        }
+        .loginmodal-form-input {
+            font-size: 12px;
+        }
+    }
+}
+
+.mat-snack-bar-container {
+    background-color: #0a9cdf !important;
+    min-height: 76px !important;
+    border-radius: 3px !important;
+    font-size: 16px !important;
+    font-weight: 200 !important;
+    line-height: 20px !important;
+    color: #ffffff !important;
+}
+
+.client-dialog-container .mat-dialog-container {
+    /* add your styles */
+    padding: 0px !important;
+    width: 768px;
+    height: 100%;
+    .mat-dialog-content {
+        margin: 0px;
+        padding: 15px 25px;
+    } // .mat-form-field-infix{
+    //     padding: 2px 10px !important;
+    // }
+}
+
+.create-client-container .mat-dialog-container {
+    /* add your styles */
+    padding: 0px !important;
+    width: 768px;
+    height: 100%;
+    .mat-dialog-content {
+        margin: 0px;
+        padding: 15px 25px;
+    } // .mat-form-field-infix{
+    //     padding: 2px 10px !important;
+    // }
+}
+
+
+.login-modal-mat-input {
+    background-color: #ffffff !important;
+}
+
+login-modal-mat-input:focus {
+    outline: none !important
+}
+
+#adminContainer .mat-form-field-appearance-outline .mat-form-field-infix {
+    padding: 4px 0px 8px 0px !important;
+}
+
+#adminContainer .mat-select-arrow {
+    color: transparent !important;
+}
+
+.permission-dialog-container .mat-dialog-container {
+    /* add your styles */
+    padding: 0px !important;
+    width: 768px;
+    min-height: 625px;
+    height: 100%;
+    .mat-dialog-content {
+        margin: 0px;
+        padding: 10px 25px;
+    }
+    .mat-form-field-appearance-outline .mat-form-field-infix {
+        padding: 4px 0px 8px 0px !important;
+    }
+    .mat-select {
+        padding: 0 8px;
+        background: #fff url('/assets/images/DropDownIcon.svg') no-repeat;
+        background-size: 16px;
+        background-position: right 10px center;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        border: 1px solid none;
+    }
+    .mat-select-arrow {
+        color: transparent !important;
+        border-left: none;
+        border-right: none;
+    }
+    .mat-button .mat-button-focus-overlay,
+    .mat-button.mat-primary .mat-button-focus-overlay,
+    .mat-button.mat-accent .mat-button-focus-overlay,
+    .mat-button.mat-warn .mat-button-focus-overlay {
+        background-color: transparent;
+    }
+    .mat-button.mat-primary .mat-button-focus-overlay {
+        background-color: transparent;
+    }
+}
+
+.mat-radio-inner-circle {
+    background-color: #0A9CDF !important;
+}
+
+.right-form {
+    #showDefaultForm .mat-form-field-infix {
+        padding-top: 8px;
+        padding-bottom: 8px;
+    }
+}
+
+.upload-dialog-container .mat-dialog-container {
+    /* add your styles */
+    padding: 0px !important;
+    width: 768px;
+    height: 100%;
+    .mat-dialog-content {
+        margin: 0px;
+        padding: 10px 25px;
+    }
+    .mat-form-field-appearance-outline .mat-form-field-infix {
+        padding: 2px 0px 8px 0px !important;
+    }
+    .ng-trigger.ng-trigger-transformPanel.ng-tns-c15-5.mat-select-panel.mat-primary.ng-star-inserted {
+        margin-top: 36px !important;
+        box-shadow: none !important;
+        border: 1.2px solid rgba(0, 0, 0, 0.12) !important;
+        border-radius: 2px !important;
+    }
+    #progress .mat-icon {
+        margin: -8px 8px 0px 0px;
+        font-size: 30px;
+        color: gray;
+        float: right;
+        margin-top: -20px;
+    }
+    .mat-select {
+        padding: 0 8px;
+        background: #fff url('/assets/images/DropDownIcon.svg') no-repeat;
+        background-size: 16px;
+        background-position: right 10px center;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        border: 1px solid none;
+    }
+    .mat-select-arrow {
+        color: transparent !important;
+        border-left: none;
+        border-right: none;
+    }
+    .afu-select-btn {
+        display: none;
+    }
+    .afu-reset-btn {}
+    .container {
+        padding: 0px !important;
+        width: 100%;
+    }
+    .afu-upload-btn {
+        display: none;
+    }
+    .afu-dragndrop-box {
+        height: 194px !important;
+        border: 1px solid #D6DBDE !important;
+        border-radius: 3px;
+        background-color: #FFFFFF;
+        width: calc(100% - 12px) !important;
+    }
+    .afu-dragndrop-text {
+        color: #9DA0A2 !important;
+        font-family: Roboto;
+        font-size: 24px;
+        line-height: 30px;
+        text-align: center;
+        font-weight: 300 !important;
+        margin-top: 75px !important;
+    }
+    .afu-constraints-info {
+        display: none;
+    }
+    .afu-valid-file {}
+    .afu-invalid-file {}
+    .afu-progress-bar {}
+    .afu-upload-status {}
+    .afu-attach-pin {}
+}
+
+.create-client-container .mat-dialog-container {
+    /* add your styles */
+    padding: 0px !important;
+    width: 768px;
+    height: 100%;
+    .mat-dialog-content {
+        margin: 0px;
+        padding: 10px 25px;
+    }
+    .mat-form-field-appearance-outline .mat-form-field-infix {
+        padding: 2px 0px 8px 0px !important;
+    }
+    .ng-trigger.ng-trigger-transformPanel.ng-tns-c15-5.mat-select-panel.mat-primary.ng-star-inserted {
+        margin-top: 36px !important;
+        box-shadow: none !important;
+        border: 1.2px solid rgba(0, 0, 0, 0.12) !important;
+        border-radius: 2px !important;
+    }
+    #progress .mat-icon {
+        margin: -8px 8px 0px 0px;
+        font-size: 30px;
+        color: gray;
+        float: right;
+        margin-top: -20px;
+    }
+    .mat-select {
+        padding: 0 8px;
+        background: #fff url('/assets/images/DropDownIcon.svg') no-repeat;
+        background-size: 16px;
+        background-position: right 10px center;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        border: 1px solid none;
+    }
+    .mat-select-arrow {
+        color: transparent !important;
+        border-left: none;
+        border-right: none;
+    }
+    .afu-select-btn {
+        display: none;
+    }
+    .afu-reset-btn {}
+    .container {
+        padding: 0px !important;
+        width: 100%;
+    }
+    .afu-upload-btn {
+        display: none;
+    }
+    .afu-dragndrop-box {
+        height: 194px !important;
+        border: 1px solid #D6DBDE !important;
+        border-radius: 3px;
+        background-color: #FFFFFF;
+        width: calc(100% - 12px) !important;
+    }
+    .afu-dragndrop-text {
+        color: #9DA0A2 !important;
+        font-family: Roboto;
+        font-size: 24px;
+        line-height: 30px;
+        text-align: center;
+        font-weight: 300 !important;
+        margin-top: 75px !important;
+    }
+    .afu-constraints-info {
+        display: none;
+    }
+    .afu-valid-file {}
+    .afu-invalid-file {}
+    .afu-progress-bar {}
+    .afu-upload-status {}
+    .afu-attach-pin {}
+}

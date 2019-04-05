@@ -1,0 +1,141 @@
+<div class="titleCover">
+  <h1 mat-dialog-title class="dialogtitle">Permissions</h1>
+  <mat-icon class="closeIcon" (click)="onNoClick()">close</mat-icon>
+</div>
+<!-- <mat-divider></mat-divider> -->
+<div mat-dialog-content>
+
+  <div fxLayout="row" fxLayout.xs="column">
+    <div class="add-employee-btn">
+
+      <button type="button" mat-button class="buttonClass" (click)="showForm = true">
+        <mat-icon>add</mat-icon>
+        Add Employee
+      </button>
+    </div>
+  </div>
+  <mat-divider></mat-divider>
+
+  <form id="permissionform" *ngIf="showForm" [formGroup]="permisssionForm" (ngSubmit)="AddEditPermission()">
+    <br>
+
+    <div fxLayout="row" fxLayout.xs="column">
+      <div fxFlex="50%;">
+        <label class="labelClassForField" for="firstname"> FIRST NAME </label>
+        <mat-form-field appearance="outline" class="full-width">
+          <input matInput id="firstname" placeholder="" type="text" name="firstname">
+        </mat-form-field>
+      </div>
+
+      <div fxFlex="50%;">
+        <label class="labelClassForField" for="lastname"> LAST NAME </label>
+        <mat-form-field appearance="outline" class="full-width">
+          <input matInput id="lastname" placeholder="" type="text" name="lastname">
+        </mat-form-field>
+      </div>
+    </div>
+
+    <div fxLayout="row" fxLayout.xs="column">
+      <div fxFlex="50%;">
+        <label class="labelClassForField" for="email"> EMAIL </label>
+        <mat-form-field appearance="outline" class="full-width">
+          <input matInput id="email" placeholder="yourname@example.com" type="text" name="email">
+        </mat-form-field>
+      </div>
+
+      <div fxFlex="37%;">
+        <label class="labelClassForField" for="phone"> PHONE </label>
+        <mat-form-field appearance="outline" class="full-width">
+          <input matInput id="phone" placeholder="(000)000-0000" type="text" name="phone">
+        </mat-form-field>
+      </div>
+
+      <div fxFlex="13%;">
+        <label class="labelClassForField" for="extension"> EXTENSION </label>
+        <mat-form-field appearance="outline" class="full-width">
+          <input matInput id="extension" placeholder="" type="text" name="extension">
+        </mat-form-field>
+      </div>
+    </div>
+
+    <div fxLayout.xs="column">
+      <div fxFlex="100%">
+        <label class="labelClassForField UserPermissionClass" for="phone"> USER PERMISSION </label>
+        <br>
+        <mat-radio-group>
+          <mat-radio-button value="1" class="radioLabelClass">Provider</mat-radio-button>
+          <div style="margin-top:-4px;"> <span class="spanClass">Can only comment on their clients' surveys</span>
+          </div>
+          <div fxLayout="row" fxLayout.xs="column">
+            <div fxFlex="30%;" class="company-name">
+              <label class="labelClassForField" for="companyname">COMPANY NAME</label>
+              <mat-form-field appearance="outline" class="full-width">
+                <input matInput id="companyname" placeholder="" type="text" name="companyname">
+              </mat-form-field>
+            </div>
+          </div>
+          <br>
+          <mat-radio-button value="2" class="radioLabelClass">Case Worker</mat-radio-button>
+          <div style="margin-top:-4px;"> <span class="spanClass">Can only comment on their clients' surveys</span>
+          </div>
+          <br>
+          <mat-radio-button value="3" class="radioLabelClass">Unit Supervisor</mat-radio-button>
+          <div style="margin-top:-4px;"> <span class="spanClass">Can only view departments, and supporting data,
+              within
+              their county</span></div>
+          <br>
+          <mat-radio-button value="4" class="radioLabelClass">Director</mat-radio-button>
+          <div style="margin-top:-4px;"> <span class="spanClass">Can only view agencies, and supporting data, within
+              their state</span></div>
+        </mat-radio-group>
+      </div>
+      <br />
+    </div>
+    <br />
+  </form>
+
+  <mat-dialog-actions *ngIf="showForm" class="bottomFixed">
+    <button class="buttonClassSubmit submitbtn" mat-button (click)="showForm = false">Submit</button>
+    <a class="cancelbtn" mat-button (click)="showForm = false">Cancel</a>
+  </mat-dialog-actions>
+
+  <mat-divider *ngIf="showForm"></mat-divider>
+
+
+  <div *ngFor="let perm of permissions$ | async">
+    <br>
+
+    <div fxLayout="row" fxLayout.xs="column">
+      <div fxFlex="12%;">
+        <div class="initialCircle">
+          <p class="initial" tabindex="1">{{perm.initials}}</p>
+        </div>
+      </div>
+      <div fxFlex="60%;" fxLayout="column" fxLayoutAlign="center ">
+        <p class="nameClass">{{perm.Name }}</p>
+        <p class="designationClass">{{perm.Designation}}</p>
+        <p class="phoneClass">{{perm.Telephone}} Ex. {{perm.Extension}}</p>
+        <p class="emailClass">{{perm.Email}}</p>
+      </div>
+      <div id="buttonGroup" fxFlex="30%;" style="display: inline-block !important;">
+        <div class="buttonContainer">
+          <button mat-raised-button color="light" class="delbtn"
+            style="border-radius: 3px 0px 0px 3px;box-shadow: none; padding: 2px !important">
+            <mat-icon style="height:21px">
+              delete_outline
+            </mat-icon>
+            <div class="buttonText">Delete</div>
+          </button>
+          <button mat-raised-button color="light" class="editbtn" style="padding: 3px !important;"
+            style="border-radius: 0px 3px 3px 0px;box-shadow: none;" (click)="showForm = true">
+            <img src="../../../assets/images/edit.png" class="delete-icon" style="height:21px">
+            <div class="buttonText" style="margin: -3px 10px 0px 10px;">Edit</div>
+          </button>
+        </div>
+      </div>
+
+    </div>
+    <br />
+    <mat-divider></mat-divider>
+  </div>
+</div>

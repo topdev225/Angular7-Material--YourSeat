@@ -1,0 +1,91 @@
+<div class="titleCover">
+    <h1 mat-dialog-title class="dialogtitle">Create Client</h1>
+    <mat-icon class="closeIcon" (click)="onNoClick()">close</mat-icon>
+</div>
+  
+<div mat-dialog-content>
+    <br>
+    <div fxLayout="row" fxLayout.xs="column">
+        <div fxFlex="48%;" fxLayout="column" >
+            <label class="labelClassForField" for="name">NAME</label>
+            <mat-form-field appearance="outline" class="full-width">
+                <input matInput id="name" placeholder="" type="text" name="name">
+            </mat-form-field>
+        </div>
+        <div fxFlex="4%;" fxLayout="column" ></div>
+        <div fxFlex="48%;" fxLayout="column" >
+            <label class="labelClassForField" for="caseworker">CASEWORKER</label>
+            <mat-form-field appearance="outline" class="full-width">
+                <mat-select [disableOptionCentering]="true" [(value)]="selectedcaseworker" tabindex="1">
+                    <mat-option value="option1">caseworker1</mat-option>
+                    <mat-option value="option2">caseworker2</mat-option>
+                    <mat-option value="option3">caseworker3</mat-option>
+                    <mat-option value="option4">caseworker4</mat-option>
+                </mat-select>
+            </mat-form-field>
+        </div>
+    </div>
+
+    <div fxLayout="row" fxLayout.xs="column">
+        <div fxFlex="30%;" fxLayout="column" >
+            <label class="labelClassForField" for="phonenumber">PHONE</label>
+            <mat-form-field appearance="outline" class="full-width">
+                <input matInput id="phonenumber" placeholder="(. ). -" type="text" name="phonenumber">
+            </mat-form-field>
+        </div>
+        <div fxFlex="4%;" fxLayout="column" ></div>
+        <div fxFlex="25%;" fxLayout="column" >
+            <label class="labelClassForField" for="extension">Extension</label>
+            <mat-form-field appearance="outline" class="full-width">
+                <input matInput id="extension" placeholder="" type="text" name="extension">
+            </mat-form-field>
+        </div>
+        <div fxFlex="4%;" fxLayout="column" ></div>
+        <div fxFlex="37%;" fxLayout="column" >
+            <label class="labelClassForField" for="email">Email</label>
+            <mat-form-field appearance="outline" class="full-width">
+                <input matInput id="email" placeholder="yourname@example.com" type="text" name="email">
+            </mat-form-field>
+        </div>
+    </div>
+    <div fxLayout="row" fxLayout.xs="column">
+        <div fxFlex="100%;" fxLayout="column" >
+            <label class="labelClassForField" for="address">Address</label>
+            <mat-form-field appearance="outline" class="full-width">
+                <input matInput id="address" placeholder="" type="text" name="address">
+            </mat-form-field>
+        </div>
+    </div>
+    <div fxLayout="row" fxLayout.xs="column">
+        <div fxFlex="59%;" fxLayout="column" >
+            <label class="labelClassForField" for="city">City</label>
+            <mat-form-field appearance="outline" class="full-width">
+                <input matInput id="city" placeholder="" type="text" name="city">
+            </mat-form-field>
+        </div>
+        <div fxFlex="3%;" fxLayout="column"></div>
+        <div fxFlex="15%;" fxLayout="column">
+            <label class="labelClassForField" for="state">STATE</label>
+            <mat-form-field appearance="outline" class="full-width">
+                <!-- <mat-select [(value)]="selected" placeholder="MD">
+                    <mat-option value="option1">MD</mat-option>
+                    <mat-option value="option2">GA</mat-option>
+                    <mat-option value="option3">MA</mat-option>
+                    <mat-option value="option4">ME</mat-option>
+                </mat-select> -->
+                <input matInput id="address" placeholder="" type="text" name="address">
+            </mat-form-field>
+        </div>
+        <div fxFlex="3%;" fxLayout="column"></div>
+        <div fxFlex="20%;" fxLayout="column">
+            <label class="labelClassForField" for="zipcode">Zip Code</label>
+            <mat-form-field appearance="outline" class="full-width">
+                <input matInput id="zipcode" placeholder="" type="text" name="zipcode">
+            </mat-form-field>
+        </div>
+    </div>
+    <div fxLayout="row" fxLayout.xs="column" class="btngroup">
+        <a class="cancelbtn" mat-button (click)="onNoClick()">Cancel</a>
+        <button class="savebtn" mat-button (click)="onNoClick()">Submit</button>
+    </div>
+</div>

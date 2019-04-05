@@ -1,0 +1,97 @@
+<div class="home-summary-component">
+  <div class="main-container">
+    <div class="search-container">
+      <div class="selects-container">
+        <div fxLayout.lt-md="column" fxLayout.md="row" fxLayoutAlign.xs="center center" fxLayoutAlign.gt-xs="">
+          <div class="select-wrapper select-client">
+            <div class="section-text">
+              CLIENT
+            </div>
+            <div fxFlex>
+              <!-- <select [(ngModel)]="selectedClient" class="client-select">
+                <option [ngValue]="undefined" selected disabled>All</option>
+                <option *ngFor="let client of clients" [ngValue]="client" selected>
+                  {{client.name}}
+                </option>
+              </select> -->
+              <!-- <mat-select  class="client-select" placeholder="All" multiple>
+                <mat-option *ngFor="let client of clients" [value]="client">{{client.name}}</mat-option>
+              </mat-select> -->
+              <ng-multiselect-dropdown [placeholder]="'All'" [data]="clientList" [(ngModel)]="selectedClientItems" [settings]="dropdownClientSettings" (onSelect)="onClientItemSelect($event)" (onSelectAll)="onClientSelectAll($event)"></ng-multiselect-dropdown>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <mat-card class="mt-3 graphsec">
+      <div class="row header-text">
+        <div class="col-md-6 sub-header-text">
+          <h1 class=''>All</h1>
+          <span>R.E.A.L Parenting Group</span>
+        </div>
+        <div class="col-md-6 text-right lockdiv">
+          <button mat-raised-button color="light" (click)="openDialog()" class="lockbtn">
+            <img src="../../../assets/images/lock.png" class="lock-icon">
+            <span>Permissions</span>
+          </button>
+        </div>
+        <span class="section-text date-range">DATE RANGE</span>
+
+        <div class="row button-group col-md-12">
+          <div class="button-30">
+            <button mat-button color="light"><span>30 Days</span></button>
+          </div>
+          <div class="dayBtn">
+            <button mat-button color="light"><span>60 Days</span></button>
+          </div>
+          <div class="dayBtn">
+            <button mat-button color="light"><span>90 Days</span></button>
+          </div>
+          <div class="dayBtn">
+            <button mat-button color="light"><span>180 Days</span></button>
+          </div>
+          <div class="dayBtn">
+            <button mat-button color="light"><span>1 Year</span></button>
+          </div>
+          <div class="dayBtn">
+            <button mat-button color="light"><span>3 Years</span></button>
+          </div>
+          <div class="dayBtn">
+            <button mat-button color="light"><span>6 Years</span></button>
+          </div>
+          <div class="dayBtn">
+            <button mat-button color="light"><span>9 Years</span></button>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-12  text-center ">
+        <div color="light" class="gobtn">
+          <span class='days-message'>We've detected several clients assigned to you with comparably high negative scores. <a [routerLink]="">Click here to view clients</a></span>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-4 text-center graphblock">
+          <h3>POSITIVE</h3>
+          <circle-progress [percent]="20" [radius]="90" [outerStrokeWidth]="14" [innerStrokeWidth]="14"
+            [outerStrokeColor]="'#C2EEDA'" [innerStrokeColor]="'#efefef'" [animation]="true" [animationDuration]="300"
+            [space]="-14" [clockwise]="false" [titleFontSize]="36" [showSubtitle]="false" [unitsFontSize]="36">
+          </circle-progress>
+        </div>
+        <div class="col-md-4 text-center graphblock">
+          <h3>NEUTRAL</h3>
+          <circle-progress [percent]="30" [radius]="90" [outerStrokeWidth]="14" [innerStrokeWidth]="14"
+            [outerStrokeColor]="'#efd3e9'" [innerStrokeColor]="'#efefef'" [animation]="true" [animationDuration]="300"
+            [space]="-14" [clockwise]="false" [titleFontSize]="36" [showSubtitle]="false" [unitsFontSize]="36">
+          </circle-progress>
+        </div>
+        <div class="col-md-4 text-center graphblock">
+          <h3>NEGATIVE</h3>
+          <circle-progress [percent]="75" [radius]="90" [outerStrokeWidth]="14" [innerStrokeWidth]="14"
+            [outerStrokeColor]="'#faced8'" [innerStrokeColor]="'#efefef'" [animation]="true" [animationDuration]="300"
+            [space]="-14" [clockwise]="false" [titleFontSize]="36" [showSubtitle]="false" [unitsFontSize]="36">
+          </circle-progress>
+        </div>
+      </div>
+    </mat-card>
+  </div>
+</div>

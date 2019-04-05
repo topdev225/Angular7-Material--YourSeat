@@ -1,0 +1,350 @@
+<div class="main-container programs-container">
+  <div fxLayout="row" fxLayoutAlign="center center">
+
+    <select [(ngModel)]="selectedCounty" class="" fxFlex="25">
+      <option [ngValue]="undefined" selected disabled>Select County</option>
+      <option *ngFor="let county of counties" [ngValue]="county" selected>
+        {{county.name}}
+      </option>
+    </select>
+
+    <div fxFlex="5"></div>
+
+    <select [(ngModel)]="selectedAgency" class="" fxFlex="25">
+      <option [ngValue]="undefined" selected disabled>Select Agency</option>
+      <option *ngFor="let agency of agencies" [ngValue]="agency" selected>
+        {{agency.name}}
+      </option>
+    </select>
+
+    <div fxFlex="5"></div>
+
+    <div fxFlex>
+      <button mat-raised-button color="accent" (click)='showProgramList = true'>
+        <mat-icon>search</mat-icon>
+      </button>
+    </div>
+  </div>
+
+  <br>
+
+  <div>
+    <button type="submit" mat-raised-button color="primary" (click)='showForm = true'>
+      <mat-icon>add</mat-icon>
+      New
+    </button>
+  </div>
+
+  <div *ngIf="showForm">
+    <br>
+    <br>
+    <div fxLayout="row" fxFlex>
+      <div fxFlex fxLayout="column">
+        <div>Name</div>
+        <div>
+          <input type="text">
+        </div>
+      </div>
+      <div fxFlex>
+        <select [(ngModel)]="selectedAgency" class="" fxFlex="25">
+          <option [ngValue]="undefined" selected disabled>Select Agency</option>
+          <option *ngFor="let agency of agencies" [ngValue]="agency" selected>
+            {{agency.name}}
+          </option>
+        </select>
+      </div>
+      <div fxFlex>
+        <select [(ngModel)]="selectedCounty" class="" fxFlex="25">
+          <option [ngValue]="undefined" selected disabled>Select County</option>
+          <option *ngFor="let county of counties" [ngValue]="county" selected>
+            {{county.name}}
+          </option>
+        </select>
+      </div>
+    </div>
+  </div>
+
+  <div *ngIf="showProgramList">
+    <br>
+    <br>
+    <mat-card>
+      <div>
+        The programs shown below are ones you can you edit
+      </div>
+      <br>
+      <div class="option-container">
+        <div fxLayout="row" class="element">
+          <div fxFlex="95" fxLayout="column" fxLayoutAlign="center ">
+            <div fxFlex class="element-title">
+              Program 4
+            </div>
+            <div fxFlex class="element-description">
+              < Program description >
+            </div>
+          </div>
+          <div fxFlex>
+            <mat-icon>
+              edit
+            </mat-icon>
+          </div>
+        </div>
+        <!--<div *ngIf="showEmail">-->
+        <!--</div>-->
+      </div>
+      <mat-divider></mat-divider>
+      <div class="option-container">
+        <div fxLayout="row" class="element">
+          <div fxFlex="95" fxLayout="column" fxLayoutAlign="center ">
+            <div fxFlex class="element-title">
+              Program 9
+            </div>
+            <div fxFlex class="element-description">
+              < Program description >
+            </div>
+          </div>
+          <div fxFlex>
+            <mat-icon>
+              edit
+            </mat-icon>
+          </div>
+        </div>
+        <!--<div *ngIf="showEmail">-->
+        <!--</div>-->
+      </div>
+    </mat-card>
+
+  </div>
+</div>
+
+<!--<div class="programs-component">-->
+<!--<div fxLayout="row" fxLayoutAlign="center center">-->
+<!--<div fxFlex>-->
+<!--<mat-form-field>-->
+<!--<mat-select placeholder="Select County">-->
+<!--<mat-option *ngFor="let county of counties" [value]="county.id">-->
+<!--{{county.name}}-->
+<!--</mat-option>-->
+<!--</mat-select>-->
+<!--</mat-form-field>-->
+<!--</div>-->
+
+<!--<div fxFlex>-->
+<!--<mat-form-field>-->
+<!--<mat-select placeholder="Select Agency">-->
+<!--<mat-option *ngFor="let agency of agencies" [value]="agency.id">-->
+<!--{{agency.name}}-->
+<!--</mat-option>-->
+<!--</mat-select>-->
+<!--</mat-form-field>-->
+<!--</div>-->
+
+<!--<div fxFlex>-->
+<!--<button mat-raised-button color="accent" (click)='showProgramList = true'>-->
+<!--<mat-icon>search</mat-icon>-->
+<!--</button>-->
+<!--</div>-->
+<!--</div>-->
+
+<!--<br>-->
+
+<!--<div>-->
+<!--<button type="submit" mat-raised-button color="primary" (click)='showForm = true'>-->
+<!--<mat-icon>add</mat-icon>-->
+<!--New-->
+<!--</button>-->
+<!--</div>-->
+
+<!--<br>-->
+<!--<br>-->
+
+<!--<div *ngIf="showForm">-->
+<!--<div fxLayoutAlign="row">-->
+
+<!--<div fxFlex>-->
+<!--<mat-form-field>-->
+<!--<input matInput [(ngModel)]="programForm.name" placeholder="Name">-->
+<!--</mat-form-field>-->
+<!--</div>-->
+
+<!--<div fxFlex>-->
+<!--<mat-form-field>-->
+<!--<mat-select placeholder="Agency">-->
+<!--<mat-option *ngFor="let agency of agencies" [value]="agency.id">-->
+<!--{{agency.name}}-->
+<!--</mat-option>-->
+<!--</mat-select>-->
+<!--</mat-form-field>-->
+<!--</div>-->
+
+<!--<div fxFlex>-->
+<!--<mat-form-field>-->
+<!--<mat-select placeholder="County">-->
+<!--<mat-option *ngFor="let county of counties" [value]="county.id">-->
+<!--{{county.name}}-->
+<!--</mat-option>-->
+<!--</mat-select>-->
+<!--</mat-form-field>-->
+<!--</div>-->
+<!--</div>-->
+
+<!--<div fxLayoutAlign="row">-->
+<!--<div fxFlex>-->
+<!--<mat-form-field>-->
+<!--<mat-select placeholder="State">-->
+<!--<mat-option *ngFor="let state of states" [value]="state.id">-->
+<!--{{state.name}}-->
+<!--</mat-option>-->
+<!--</mat-select>-->
+<!--</mat-form-field>-->
+<!--</div>-->
+<!--<div fxFlex>-->
+<!--<mat-form-field>-->
+<!--<input matInput placeholder="Address">-->
+<!--</mat-form-field>-->
+<!--</div>-->
+<!--<div fxFlex>-->
+<!--<mat-form-field>-->
+<!--<mat-select [(ngModel)]="programForm.address" placeholder="Bus Accessible">-->
+<!--<mat-option *ngFor="let re of res" [value]="re.id">-->
+<!--{{re.value}}-->
+<!--</mat-option>-->
+<!--</mat-select>-->
+<!--</mat-form-field>-->
+<!--</div>-->
+<!--</div>-->
+
+<!--<div>-->
+<!--<mat-form-field>-->
+<!--<mat-select placeholder="Metro Accessible">-->
+<!--<mat-option *ngFor="let re of res" [value]="re.id">-->
+<!--{{re.value}}-->
+<!--</mat-option>-->
+<!--</mat-select>-->
+<!--</mat-form-field>-->
+<!--</div>-->
+
+<!--<div>-->
+<!--<mat-form-field>-->
+<!--<input matInput [(ngModel)]="programForm.description" placeholder="Description">-->
+<!--</mat-form-field>-->
+<!--</div>-->
+
+<!--<div>-->
+<!--<p>Pre-program</p>-->
+<!--</div>-->
+<!--<div fxLayoutAlign="row">-->
+<!--<div fxFlex>-->
+<!--<mat-form-field>-->
+<!--<mat-select placeholder="Date Range">-->
+<!--<mat-option *ngFor="let county of counties" [value]="county.id">-->
+<!--{{county.name}}-->
+<!--</mat-option>-->
+<!--</mat-select>-->
+<!--</mat-form-field>-->
+<!--</div>-->
+<!--<div fxFlex>-->
+
+<!--<mat-form-field>-->
+<!--<mat-select placeholder="Survey">-->
+<!--<mat-option *ngFor="let survey of surveys" [value]="survey.id">-->
+<!--{{survey.name}}-->
+<!--</mat-option>-->
+<!--</mat-select>-->
+<!--</mat-form-field>-->
+<!--</div>-->
+<!--<div fxFlex></div>-->
+<!--</div>-->
+
+<!--<div>-->
+<!--<p>Mid-program</p>-->
+<!--</div>-->
+<!--<div fxLayoutAlign="row">-->
+<!--<div fxFlex>-->
+
+<!--<mat-form-field>-->
+<!--<mat-select placeholder="Date Range">-->
+<!--<mat-option *ngFor="let county of counties" [value]="county.id">-->
+<!--{{county.name}}-->
+<!--</mat-option>-->
+<!--</mat-select>-->
+<!--</mat-form-field>-->
+<!--</div>-->
+<!--<div fxFlex>-->
+
+<!--<mat-form-field>-->
+<!--<mat-select placeholder="Survey">-->
+<!--<mat-option *ngFor="let survey of surveys" [value]="survey.id">-->
+<!--{{survey.name}}-->
+<!--</mat-option>-->
+<!--</mat-select>-->
+<!--</mat-form-field>-->
+<!--</div>-->
+<!--<div fxFlex>-->
+<!--</div>-->
+<!--</div>-->
+
+<!--<div>-->
+<!--<p>End-program</p>-->
+<!--</div>-->
+<!--<div fxLayoutAlign="row">-->
+<!--<div fxFlex>-->
+
+<!--<mat-form-field>-->
+<!--<mat-select placeholder="Date Range">-->
+<!--<mat-option *ngFor="let county of counties" [value]="county.id">-->
+<!--{{county.name}}-->
+<!--</mat-option>-->
+<!--</mat-select>-->
+<!--</mat-form-field>-->
+
+<!--</div>-->
+<!--<div fxFlex>-->
+
+<!--<mat-form-field>-->
+<!--<mat-select placeholder="Survey">-->
+<!--<mat-option *ngFor="let survey of surveys" [value]="survey.id">-->
+<!--{{survey.name}}-->
+<!--</mat-option>-->
+<!--</mat-select>-->
+<!--</mat-form-field>-->
+<!--</div>-->
+<!--</div>-->
+
+<!--<br>-->
+<!--<br>-->
+
+<!--<div>-->
+<!--<button type="submit" mat-raised-button color="primary" (click)="addNewProgram(programForm)">Done</button>-->
+<!--<a mat-button (click)='showForm = false'>Cancel</a>-->
+<!--</div>-->
+
+<!--<br>-->
+<!--<br>-->
+<!--</div>-->
+
+<!--<div *ngIf="showProgramList">-->
+<!--<div>-->
+<!--<p>-->
+<!--The programs show below are ones you can you edit-->
+<!--</p>-->
+<!--</div>-->
+
+<!--<div>-->
+<!--<mat-expansion-panel *ngFor="let program of programs" [(expanded)]="expandState" hideToggle>-->
+<!--<mat-expansion-panel-header>-->
+<!--<mat-panel-title>-->
+<!--{{program.name}}-->
+<!--<br>-->
+<!--{{program.description}}-->
+<!--</mat-panel-title>-->
+<!--<mat-panel-description>-->
+<!--<mat-icon>edit</mat-icon>-->
+<!--</mat-panel-description>-->
+<!--</mat-expansion-panel-header>-->
+<!--</mat-expansion-panel>-->
+<!--</div>-->
+
+<!--</div>-->
+
+
+<!--</div>-->

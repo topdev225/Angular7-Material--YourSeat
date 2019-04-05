@@ -1,0 +1,176 @@
+<div class="home-performance-component">
+
+  <div class="main-container">
+    <div fxLayout.xs="column" fxLayout.gt-xs="row" fxLayoutAlign.xs="center center" fxLayoutAlign.gt-xs="">
+      <div fxFlex="50" fxLayout="column">
+        <div fxFlex class="section-text">
+          PROGRAMS
+        </div>
+        <div fxFlex>
+          <select [(ngModel)]="selectedProgram" class="program-select">
+            <option [ngValue]="undefined" selected disabled>Select a program...</option>
+            <option [ngValue]="'All'">
+              All
+            </option>
+            <option *ngFor="let program of programs" [ngValue]="program" selected>
+              {{program.name}}
+            </option>
+          </select>
+        </div>
+      </div>
+      <div fxFlex="30" fxLayout="column">
+        <div fxFlex class="section-text">
+          DATE RANGE
+        </div>
+        <form>
+          <div>
+            <div>
+              <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+                   aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="exampleModalLabel">Select a date range</h5>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    <div class="modal-body">
+                      <ngb-datepicker #dp (select)="onDateSelection($event)" [displayMonths]="2" [dayTemplate]="t"
+                                      outsideDays="hidden">
+                      </ngb-datepicker>
+
+                      <ng-template #t let-date let-focused="focused">
+                      <span class="custom-day"
+                            [class.focused]="focused"
+                            [class.range]="isRange(date)"
+                            [class.faded]="isHovered(date) || isInside(date)"
+                            (mouseenter)="hoveredDate = date"
+                            (mouseleave)="hoveredDate = null">
+                        {{ date.day }}
+                      </span>
+                      </ng-template>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                      <button type="button" class="btn btn-primary" data-dismiss="modal" (click)="selectDateRange()">
+                        Select range
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!--<div class="date-select" fxLayout="row">-->
+                <!--<input fxFlex class="date-select" placeholder="{{fromShowedDate}} - {{toShowedDate}}"-->
+                       <!--name="dp" [(ngModel)]="model" ngbDatepicker #d="ngbDatepicker" class="date-picker">-->
+                <!--<button mat-icon-button data-toggle="modal" data-target="#exampleModal">-->
+                  <!--<mat-icon>date_range</mat-icon>-->
+                <!--</button>-->
+              <!--</div>-->
+
+              <div class="date-div" fxLayout="row" fxLayoutAlign="center center" data-toggle="modal">
+                <div fxFlex="90" fxLayoutAlign=" center">
+                  {{fromShowedDate}} - {{toShowedDate}}
+                </div>
+                <div fxFlex>
+                  <button mat-icon-button data-toggle="modal" data-target="#exampleModal" class="calendar-icon">
+                    <mat-icon>date_range</mat-icon>
+                  </button>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </form>
+      </div>
+      <div fxFlex="20" fxLayout="column">
+        <div fxFlex [ngClass.gt-xs]="'advanced-option'">
+          <button class="advanced-option-button" (click)="toogleAdvancedOptions()">Advanced</button>
+        </div>
+        <div fxFlex></div>
+      </div>
+    </div>
+
+    <br>
+
+    <div fxLayout.xs="column" fxLayout.gt-xs="row" fxLayoutAlign.xs="center center" fxLayoutAlign.gt-xs="">
+      <div fxFlex="30" fxLayout="column">
+        <div fxFlex class="section-text">
+          CLIENT
+        </div>
+        <div fxFlex>
+          <select [(ngModel)]="selectedClient" class="client-select">
+            <option [ngValue]="undefined" selected disabled>Select a client...</option>
+            <option [ngValue]="null">
+              All
+            </option>
+            <option *ngFor="let client of clients" [ngValue]="client" selected>
+              {{client.lastName + ', ' + client.firstName}}
+            </option>
+          </select>
+        </div>
+      </div>
+    </div>
+
+    <br>
+
+    <div *ngIf="advancedOptions" fxLayout="column">
+      <div fxFlex="30" fxLayout="column">
+        <div fxFlex class="section-text">
+          AGENCY
+        </div>
+        <div fxFlex>
+          <select [(ngModel)]="selectedAgency" class="agency-select">
+            <option [ngValue]="undefined" selected disabled>Select an agency...</option>
+            <option [ngValue]="null">
+              All
+            </option>
+            <option *ngFor="let agency of agencies" [ngValue]="agency" selected>
+              {{agency.name}}
+            </option>
+          </select>
+        </div>
+      </div>
+
+      <br>
+
+      <div fxFlex="30" fxLayout="column">
+        <div fxFlex class="section-text">
+          COUNTY
+        </div>
+        <div fxFlex>
+          <select [(ngModel)]="selectedCounty" class="county-select">
+            <option [ngValue]="undefined" selected disabled>Select a county...</option>
+            <option [ngValue]="null">
+              All
+            </option>
+            <option *ngFor="let county of counties" [ngValue]="county" selected>
+              {{county.name}}
+            </option>
+          </select>
+        </div>
+      </div>
+    </div>
+
+    <br>
+    <br>
+
+    <mat-card>
+      <mat-card-header>
+        <mat-card-title class="program-header">Family Reunification</mat-card-title>
+        <mat-card-subtitle>Increase client's parenting skills in supporting child's needs</mat-card-subtitle>
+      </mat-card-header>
+
+      <br>
+
+      <mat-card-content>
+        <img mat-card-image src="assets/graphs/graph2.png">
+      </mat-card-content>
+
+    </mat-card>
+
+
+  </div>
+
+</div>

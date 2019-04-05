@@ -1,0 +1,89 @@
+<div id="adminContainer" class="main-container">
+  <div class="title">
+    Admin
+  </div>
+  <mat-card class="admin-card">
+    <div class="option-container">
+      <div fxLayout="row" fxLayout.xs="column">
+        <div fxFlex="7%;">
+          <div fxFlex class="icon-container">
+            <mat-icon [color]="'icon-edit'">
+              edit
+            </mat-icon>
+          </div>
+        </div>
+        <div fxFlex="93%;" fxLayout="column" fxLayoutAlign="center ">
+          <div fxFlex class="element-title">
+            Survey Data
+          </div>
+        </div>
+      </div>
+
+      <form [formGroup]="commentForm">
+        <br>
+        <div fxLayout="row" fxLayout.xs="column">
+          <div fxFlex="7%;"></div>
+          <div fxFlex="46%;">
+            <label class="labelClassForField" for="program"> PROGRAM </label>
+            <mat-form-field appearance="outline" class="half-width">
+              <!-- <input matInput required id="program" placeholder="" type="text" name="program"> -->
+              <mat-select [(value)]="selectedProgram">
+                <mat-option>None</mat-option>
+                <mat-option value="option1">Pre-Program</mat-option>
+                <mat-option value="option2">Program 2</mat-option>
+                <mat-option value="option3">Program 3</mat-option>
+              </mat-select>
+            </mat-form-field>
+          </div>
+
+          <div fxFlex="46%;">
+            <label class="labelClassForField" for="client"> CLIENT </label>
+            <mat-form-field appearance="outline" class="half-width">
+              <mat-select [(value)]="selectedClient">
+                <mat-option>None</mat-option>
+                <mat-option value="option1">Linda Bixton</mat-option>
+                <mat-option value="option2">Client 2</mat-option>
+                <mat-option value="option3">Client 3</mat-option>
+              </mat-select>
+            </mat-form-field>
+          </div>
+        </div>
+
+        <div fxLayout="row" fxLayout.xs="column">
+          <div fxFlex="7%;"></div>
+          <div fxFlex="29%;">
+            <label class="labelClassForField" for="positive"> POSITIVE % </label>
+            <mat-form-field appearance="outline" class="full-width">
+              <input matInput id="positive" placeholder="" type="text" name="positive">
+            </mat-form-field>
+          </div>
+
+          <div fxFlex="29%;">
+            <label class="labelClassForField" for="neutral"> NEUTRAL % </label>
+            <mat-form-field appearance="outline" class="full-width">
+              <input matInput id="neutral" placeholder="" type="text" name="neutral">
+            </mat-form-field>
+          </div>
+
+          <div fxFlex="29%;">
+            <label class="labelClassForField" for="negative"> NEGATIVE % </label>
+            <mat-form-field appearance="outline" class="full-width">
+              <input matInput id="negative" placeholder="" type="text" name="negative">
+            </mat-form-field>
+          </div>
+        </div>
+
+        <div fxLayout="row" fxLayout.xs="column">
+          <div fxFlex="7%;"></div>
+          <button mat-button class="submitClass" (click)="OnSubmit()"> Submit </button>
+          <button mat-button class="cancelClass" (click)="OnSubmit()"> Cancel </button>
+        </div>
+
+      </form>
+
+
+    </div>
+  </mat-card>
+
+
+</div>

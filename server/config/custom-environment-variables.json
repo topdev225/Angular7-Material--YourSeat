@@ -1,0 +1,18 @@
+{
+    "database": {
+      "url": "DATABASE_URL",
+      "host": "TYPEORM_HOST",
+      "username": "TYPEORM_USERNAME",
+      "password": "TYPEORM_PASSWORD",
+      "database": "TYPEORM_DATABASE",
+      "port": "DATABASE_PORT"
+    },
+    "typeorm": {
+      "entitiesGlob": "TYPEORM_ENTITIES"
+    },
+    "jwt": {
+      "domain": "JWT_DOMAIN",
+      "secret": "JWT_SECRET",
+      "audience": "JWT_AUDIENCE"
+    }
+  }

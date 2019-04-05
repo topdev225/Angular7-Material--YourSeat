@@ -1,0 +1,137 @@
+<div class="surveys-component">
+  <div fxLayout="row" fxLayoutAlign="center center">
+    <div fxFlex>
+      <mat-form-field>
+        <mat-select placeholder="Select County">
+          <mat-option *ngFor="let county of counties" [value]="county.id">
+            {{county.name}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+
+    <div fxFlex>
+      <mat-form-field>
+        <mat-select placeholder="Select Agency">
+          <mat-option *ngFor="let agency of agencies" [value]="agency.id">
+            {{agency.name}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+
+    <div fxFlex>
+      <mat-form-field>
+        <mat-select placeholder="Select Program">
+          <mat-option *ngFor="let program of programs" [value]="program.id">
+            {{program.name}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+
+    <div fxFlex>
+      <button mat-raised-button color="accent" (click)='showSurveyList = true'>
+        <mat-icon>search</mat-icon>
+      </button>
+    </div>
+
+  </div>
+
+  <div>
+    <button type="submit" mat-raised-button color="primary" (click)='showForm = true'>
+      <mat-icon>add</mat-icon>
+      New
+    </button>
+  </div>
+
+  <div *ngIf="showForm">
+    <div fxLayout="row" fxLayoutAlign="center center">
+
+      <div fxFlex>
+        <mat-form-field>
+          <input matInput placeholder="Name">
+        </mat-form-field>
+      </div>
+
+      <div fxFlex>
+        <mat-form-field>
+          <mat-select placeholder="Evaluation Stage">
+            <mat-option *ngFor="let agency of agencies" [value]="agency.id">
+              {{agency.name}}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+
+      <div fxFlex></div>
+
+    </div>
+
+    <div>
+
+      <mat-form-field>
+        <input matInput placeholder="Description">
+      </mat-form-field>
+
+    </div>
+
+    <div>
+      <mat-form-field>
+        <input matInput placeholder="Question 1">
+      </mat-form-field>
+    </div>
+
+    <br>
+
+    <div>
+      <a mat-button>
+        <mat-icon>add</mat-icon>
+        Add Cuestion
+      </a>
+    </div>
+
+    <br>
+    <br>
+
+    <div fxLayout="row">
+      <div fxFlex>
+        <button type="submit" mat-raised-button color="primary">Done</button>
+      </div>
+      <div fxFlex>
+        <a mat-button (click)='showForm = false'>Cancel</a>
+      </div>
+      <div fxFlex="80"></div>
+    </div>
+
+    <br>
+    <br>
+  </div>
+
+  <div *ngIf="showSurveyList">
+
+    <div>
+      <p>
+        The surveys show below are ones you can you edit
+      </p>
+    </div>
+
+    <div>
+
+      <mat-expansion-panel *ngFor="let survey of surveys" [(expanded)]="expandState" hideToggle>
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            {{survey.name}} | {{survey.link}}
+            <br>
+            {{survey.description}}
+          </mat-panel-title>
+          <mat-panel-description>
+            <mat-icon>edit</mat-icon>
+          </mat-panel-description>
+        </mat-expansion-panel-header>
+
+      </mat-expansion-panel>
+    </div>
+
+  </div>
+</div>

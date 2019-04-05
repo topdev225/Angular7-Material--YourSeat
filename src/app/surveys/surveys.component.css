@@ -1,0 +1,9 @@
+.surveys-component {
+  /*min-height: calc(100vh - 128px);*/
+  min-height: calc(100vh - 128px - 6vh);
+  background-color: #eceff1;
+  padding-left: 10vw;
+  padding-right: 10vw;
+  padding-top: 3vh;
+  padding-bottom: 3vh;
+}

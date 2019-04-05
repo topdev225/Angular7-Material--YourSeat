@@ -1,0 +1,5 @@
+{
+  "postgraphile": {
+    "internalPort": 9999
+  }
+}

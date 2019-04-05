@@ -1,0 +1,132 @@
+.home-performance-component {
+  background-color: #eceff1;
+  padding-top: 3vh;
+  padding-bottom: 400px;
+  height: calc(100vh - 128px);
+}
+
+.home-performance-size-small {
+  /*min-height: calc(100vh - 112px) !important;*/
+  min-height: calc(100vh - 112px - 6vh) !important;
+}
+
+.home-performance-padding {
+  padding-left: 7vw;
+  padding-right: 7vw;
+}
+
+.navigation-list {
+  display: inherit;
+  list-style-type: none;
+  font-weight: 100;
+  font-size: 1rem;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px;
+}
+
+.tab-container {
+  box-shadow: 0 0 4px 0 #B5B5B5;
+  text-align: center;
+}
+
+.tab-label {
+  color: #5E5E5E;
+  padding-bottom: 0px;
+}
+
+.tab-dateRange {
+  color: #9B9B9B;
+  padding-top: 0px;
+}
+
+.section-text {
+  color: #9B9B9B !important;
+}
+
+.advanced-option {
+  text-align: end;
+}
+
+.advanced-option-button {
+  color: #007bff;
+  cursor: pointer;
+  background: none;
+  border: none;
+}
+
+.client-select {
+  width: 255px;
+  height: 35px;
+  font-size: 14px;
+}
+
+.program-select {
+  width: 540px;
+  height: 35px;
+  font-size: 14px;
+  color: #494949 !important;
+  box-shadow: none !important;
+}
+
+.agency-select {
+  width: 540px;
+  height: 35px;
+  font-size: 14px;
+  color: #494949 !important;
+  box-shadow: none !important;
+}
+
+.county-select {
+  width: 540px;
+  height: 35px;
+  font-size: 14px;
+  color: #494949 !important;
+  box-shadow: none !important;
+}
+
+.date-div {
+  height: 35px;
+  width: 255px;
+  font-size: 14px;
+  background-color: #FFFFFF;
+  border-style: solid;
+  border-color: rgb(169, 169, 169);;
+  border-width: 0.1px;
+  cursor: pointer;
+  padding-left: 6px;
+}
+
+.date-select {
+  height: 35px;
+  width: 255px;
+  font-size: 14px;
+}
+
+.program-header {
+  color: #494949;
+  font-size: 32px;
+}
+
+/* Date range picker styles*/
+.custom-day {
+  text-align: center;
+  padding: 0.185rem 0.25rem;
+  display: inline-block;
+  height: 2rem;
+  width: 2rem;
+}
+.custom-day.focused {
+  background-color: #e6e6e6;
+}
+.custom-day.range, .custom-day:hover {
+  background-color: rgb(2, 117, 216);
+  color: white;
+}
+.custom-day.faded {
+  background-color: rgba(2, 117, 216, 0.5);
+}

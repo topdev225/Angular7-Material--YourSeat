@@ -1,0 +1,1053 @@
+@import '../../shared/styles/variables.sass'
+@import '../../shared/styles/common.sass'
+@import '../../shared/styles/mixins.sass'
+
+.home-clients-component
+  background-color: $bg-color-grey
+  padding-top: 0px
+  padding-bottom: 400px
+  height: calc(100vh - 128px)
+
+  .main-container
+    width: 1110px
+    margin: 25px auto
+
+    +tablet
+      width: 100%
+
+.home-clients-size-small 
+  min-height: calc(100vh - 112px - 6vh) !important
+
+.home-clients-padding 
+  padding-left: 7vw
+  padding-right: 7vw
+
+.selects-container
+  width: 905px
+  // border-right: 1px solid
+  border-color: #D6DBDE
+  margin-bottom: 28px !important
+
+  +smallTablet 
+    width: 70%
+
+  +mobile 
+    width: 55%
+.search-container
+  display: flex
+  flex-direction: row
+  justify-content: space-between
+  align-items: center
+  border-bottom: 1px solid
+  border-color: #D6DBDE
+
+  +tablet 
+    padding: 0 30px
+
+  +mobile 
+    padding: 0 20px
+
+  .search-button-container
+    margin-top: -10px
+    .btn-search
+      height: 40px
+      width: 160px
+      border: 1px solid #39CB76
+      border-radius: 3px	
+      background-color: #39CB76
+      padding: 0px !important
+
+      mat-icon 
+        padding-left: 8px
+        padding-top: 2px
+        float: left
+        font-size: 30px
+        color: #FFFFFF
+
+      span 
+        color: #FAFAFA	
+        font-family: Roboto	
+        font-size: 14px	
+        line-height: 30px
+
+
+.select-wrapper
+  display: flex
+  flex-direction: column
+  padding-right: 30px
+
+  // +tablet
+  //   padding: 0 30px
+
+  +mobile
+    width: 100%
+    // margin-bottom: 25px
+    padding: 0
+
+  select 
+    padding: 0 8px
+    background: #fff url('/assets/images/DropDownIcon.svg') no-repeat
+    background-size: 16px
+    background-position: right 10px center
+    -webkit-appearance: none
+    -moz-appearance: none
+    border: 1px solid $bg-color-grey-tidy-grey
+
+::ng-deep .multiselect-dropdown
+  .dropdown-btn
+    border: none !important
+    .dropdown-down
+      display: none !important
+    .dropdown-up
+      display: none !important
+    .ng-star-inserted
+      padding-right: 20px !important
+      color: #ffffff !important
+    .selected-item
+      background: #0A9CDF !important
+  .dropup-btn
+    border: none !important
+
+::ng-deep .multiselect-item-checkbox[_ngcontent-c7] input[type=checkbox][_ngcontent-c7] + div[_ngcontent-c7]:before
+  color: #0A9CDF !important
+  border: 2px solid #0A9CDF !important
+
+::ng-deep .multiselect-item-checkbox[_ngcontent-c7] input[type=checkbox][_ngcontent-c7]:checked + div[_ngcontent-c7]:before
+  background: #0A9CDF !important
+
+::ng-deep .multiselect-item-checkbox[_ngcontent-c7] input[type=checkbox][_ngcontent-c7] + div[_ngcontent-c7]:before
+  color: #0A9CDF !important
+  border: 2px solid #0A9CDF !important
+
+::ng-deep .multiselect-dropdown
+  padding: 0px !important
+  background: #fff url('/assets/images/DropDownIcon.svg') no-repeat
+  background-size: 16px
+  background-position: right 10px center
+  -webkit-appearance: none
+  -moz-appearance: none
+  border: 1px solid $bg-color-grey-tidy-grey
+
+.advanced-option 
+  text-align: end
+
+.advanced-option-button 
+  color: #007bff
+  cursor: pointer
+  background: none
+  border: none
+
+.section-text 
+  color: #9DA0A2
+  font-family: Roboto
+  font-size: 12px
+  font-weight: 500
+  line-height: 16px
+  margin-bottom: 5px
+
+  &.client-text
+    margin-top: 24px
+
+.client-picture 
+  height: 70%
+  width: 100%
+  object-fit: cover /*magic*/
+  alignment: center
+  display: block
+  margin: auto
+
+.text 
+  color: #9B9B9B !important
+
+.year-text 
+  color: black
+
+.edit-icon
+  color:#0A9CDF
+  cursor: pointer
+  float: right
+  width: 6%
+  margin-top: -24px
+
+.labelClassForField
+  color: #9DA0A2
+  font-family: Roboto
+  font-size: 12px
+  font-weight: 500
+  line-height: 16px
+  width: 90%
+
+.right-form
+  width: 23% !important
+
+.recommended-programs-text 
+  text-decoration: underline
+
+.savebtn
+  background-color: #39CB76
+  color: white
+  width: 125px
+  height: 40px
+  margin-right: 10px
+
+.savescorebtn
+  background-color: #39CB76
+  color: white
+  width: 125px
+  height: 40px
+  margin-left: 10px
+
+#showScoreForm
+  .labelClassForField
+    color: #9DA0A2
+    font-family: Roboto	
+    font-size: 14px	!important
+    line-height: 40px
+    font-weight: 400
+
+#showScoreEditForm
+  .labelClassForField
+    color: #9DA0A2
+    font-family: Roboto	
+    font-size: 14px	!important
+    line-height: 0px
+    font-weight: 400
+    margin-bottom: 0px !important
+
+#showEditForm 
+  padding: 15px
+  .subtext
+    color: #494949
+    font-family: Roboto	
+    font-size: 14px	
+    line-height: 40px
+    font-weight: 400
+
+  .addresstext
+    color: #494949
+    font-family: Roboto	
+    font-size: 14px	
+    line-height: 20px
+    font-weight: 400
+    padding-top: 10px
+    display: block
+
+#showDefaultForm
+  padding: 15px
+
+.kinshipdiv
+  border-top: 1px solid
+  border-color: #D6DBDE
+  margin-top: 20px
+  margin-bottom: 190px
+
+.recommended-programs-list 
+  padding: 0
+  list-style-type: none
+
+
+.recomended-program-link 
+  color: #0a9cdf
+  cursor: pointer
+
+.mat-card
+  padding: 0px !important
+
+.header-text
+  height: 72px	
+  background-color: #FFFFFF	
+  box-shadow: 0 0 7px 0 rgba(155,155,155,0.5)
+  h1
+    color: #494949
+    font-family: Roboto	
+    font-size: 28px	
+    line-height: 40px
+    padding-top: 16px
+    padding-left: 0px
+
+.space-line
+  height: 13px
+  margin: 0px !important
+
+.client-card 
+  padding-top: 60px
+  margin-left: 0px
+  margin-right: 0px
+
+.no-client-card 
+  padding-top: 15px
+  margin: 48px 0px
+  border-radius: 0
+  border: 1px solid #d6dbde
+  box-shadow: none
+
+  +tablet
+    margin: 35px 30px
+    padding-bottom: 144px
+
+  +mobile 
+    margin: 35px 20px
+    padding-bottom: 144px
+
+  img.img-no-client
+    max-width: 300px
+
+  .text-no-client
+    margin: 0 auto
+    margin-top: 45px
+    font-size: 28px
+    line-height: 40px
+    font-weight: 300
+    letter-spacing: normal
+    color: $font-color-green-grey
+
+
+.card-left-side 
+  padding-left: 57px
+  color: #9B9B9B !important
+
+
+.card-right-side 
+  /*padding-left: 80px*/
+  padding-right: 60px
+
+
+.list-element 
+  margin: 500px
+
+.side-bar
+  .side-bar-header-text
+    h3
+      color: #494949	
+      font-family: Roboto	
+      font-size: 18px	
+      line-height: 21px
+
+.text-right
+  button
+    margin-top: 12px !important
+    width: 135px
+
+.block 
+  display: block
+
+.client-name 
+  font-size: 1.5rem
+  color: black
+
+.agency-select 
+  width: 540px
+  height: 35px
+  font-size: 14px
+  color: #494949 !important
+  box-shadow: none !important
+
+#showInsightFrom
+  span
+    color: #494949	
+    font-family: Roboto	
+    font-size: 16px	
+    font-weight: 500	
+    line-height: 20px
+
+.county-select 
+  width: 540px
+  height: 35px
+  font-size: 14px
+  color: #494949 !important
+  box-shadow: none !important
+
+
+.date-select 
+  height: 35px
+  width: 380px
+  font-size: 14px
+
+  +tablet
+    width: 100%  
+
+.select-date
+
+  +smallTablet
+    .section-text
+      margin-top: 24px
+
+
+  .date-div 
+    height: 35px
+    width: 380px
+    font-size: 14px
+    background-color: #FFFFFF
+    border: 1px solid $bg-color-grey-tidy-grey
+    border-radius: 4px
+    cursor: pointer
+    padding-left: 6px
+    margin-top: 4px
+
+    +tablet 
+      width: 300px
+
+    +smallTablet
+      width: 400px
+
+    +mobile
+      width: 200px
+
+    .mat-icon-date-range
+      color: $bg-color-blue
+
+
+.btn-calendar
+  width: 35px
+  height: 35px
+  line-height: 35px
+
+  .icon-calendar
+    width: 18px
+
+
+
+/* enable absolute positioning */
+.inner-addon 
+  position: relative
+
+
+/* style icon */
+.inner-addon .glyphicon 
+  position: absolute
+  padding: 10px
+  pointer-events: none
+
+
+/* align icon */
+.left-addon .glyphicon 
+  left: 0px
+
+
+.right-addon .glyphicon 
+  right: 0px
+
+
+/* add padding  */
+.left-addon input 
+  padding-left: 30px
+
+
+.right-addon input 
+  padding-right: 30px
+
+
+/*Timeline CSS code*/
+
+ul.timeline 
+  list-style-type: none
+  position: relative
+
+
+ul.timeline:before 
+  content: ' '
+  background: #d4d9df
+  display: inline-block
+  position: absolute
+  left: 29px
+  width: 2px
+  height: 100%
+  z-index: 400
+
+
+ul.timeline > li 
+  margin: 20px 0
+  padding-left: 20px
+
+
+ul.timeline > li:before 
+  content: ' '
+  /* background: white */
+  display: inline-block
+  position: absolute
+  border-radius: 50%
+  /* border: 3px solid #22c0e8 */
+  left: 20px
+  width: 20px
+  height: 20px
+  z-index: 400
+
+ul.timeline > li.timeline-success:before 
+  content: ' '
+  background: #c3e6cb
+  display: inline-block
+  position: absolute
+  border-radius: 50%
+  border: 3px solid #c3e6cb
+  left: 20px
+  width: 20px
+  height: 20px
+  z-index: 400
+
+
+ul.timeline > li.timeline-failure:before 
+  content: ' '
+  background: #f8d7da
+  display: inline-block
+  position: absolute
+  border-radius: 50%
+  border: 3px solid #f8d7da
+  left: 20px
+  width: 20px
+  height: 20px
+  z-index: 400
+
+
+/* Date range picker styles*/
+.custom-day 
+  text-align: center
+  padding: 0.185rem 0.25rem
+  display: inline-block
+  height: 2rem
+  width: 2rem
+
+
+.custom-day.focused 
+  background-color: #e6e6e6
+
+
+.custom-day.range, .custom-day:hover 
+  background-color: rgb(2, 117, 216)
+  color: white
+
+
+.custom-day.faded 
+  background-color: rgba(2, 117, 216, 0.5)
+
+
+.form-control + button 
+  position: absolute
+  right: 20px
+  border: 0
+  background-color: transparent
+  box-shadow: none
+
+.select-programs 
+    width: 445px !important
+
+.select-client
+    width: 445px !important
+
+// .client-select 
+//   ::ng-deep .mat-select-placeholder
+//     color: #494949
+//     font-family: Roboto	
+//     font-size: 14px
+//     line-height: 30px
+//     padding-left: 8px
+
+// .program-select 
+//   ::ng-deep .mat-select-placeholder
+//     color: #494949
+//     font-family: Roboto	
+//     font-size: 14px
+//     line-height: 30px
+//     padding-left: 8px
+
+// ::ng-deep .ng-trigger-transformPanel
+//   min-width: 100% !important
+//   margin-top: 37px !important
+//   margin-left: 40px !important
+
+// ::ng-deep .mat-select-value-text
+//   color: #494949	
+//   font-family: Roboto	
+//   font-size: 14px	
+//   line-height: 30px
+//   padding-left: 8px
+  
+// ::ng-deep .mat-option.mat-active 
+//   background: lightblue !important
+
+.program-select 
+  width: 380px
+  height: 31.87px
+  font-size: 14px
+  color: #494949 !important
+  background-color: #ffffff
+  border-radius: 3px
+  
+  +tablet
+    width: 400px
+
+  +mobile
+    width: 200px   
+
+
+.client-select 
+  width: 445px
+  height: 31.87px !important
+  font-size: 14px
+  background-color: #ffffff
+  border: 1px solid #D6DBDE
+  border-radius: 3px
+
+  +tablet
+    width: 400px
+
+  +mobile
+    width: 200px
+
+.client-name 
+  font-size: 1.5rem
+  color: black
+
+
+.program-select 
+  width: 380px
+  height: 31.87px
+  font-size: 14px
+  color: #494949 !important
+  background-color: #ffffff
+  border: 1px solid #D6DBDE
+  border-radius: 3px
+
+  +tablet
+    width: 400px
+
+  +mobile
+    width: 200px   
+
+.client-select
+  width: 350px
+  height: 35px
+  font-size: 14px
+  color: #494949 !important
+  background-color: #ffffff
+  box-shadow: none !important
+
+  +tablet
+    width: 400px
+
+  +mobile
+    width: 200px   
+
+.button-group
+  margin: auto
+  padding: 0px
+  margin-bottom: 16px
+  
+.dayBtn, .button-30
+	float: left
+
+.dayBtn button, .button-30 button
+  width: 95px !important
+  height: 32px !important
+  border: 1px solid $bg-color-grey-tidy-grey 
+  height: 16px
+  color: #494949	
+  font-family: Roboto	
+  font-size: 12px	
+  font-weight: 500	
+  line-height: 16px
+  text-align: center
+  box-shadow: none
+  margin-right: 7px
+
+.button-30 button 
+	width: 95px
+  height: 32px
+  float: left
+	border: 1px solid #39CB76
+	border-radius: 3px
+	background-color: rgba(57,203,118,0.1)
+
+.button-30 span
+  color: #39CB76 !important
+  font-family: Roboto	!important
+  font-size: 12px	!important
+  line-height: 50px	!important
+  text-align: center !important
+
+.dayBtn span
+  color: #494949 !important	
+  font-family: Roboto !important	
+  font-size: 12px !important	
+  line-height: 50px !important
+  text-align: center !important
+
+.tabBtn
+  width: 92px !important
+  height: 32px !important
+  float: left
+  margin-top: 10px
+
+.tabBtn button
+  width: 92px !important
+  height: 32px !important
+  border: 1px solid $bg-color-grey-tidy-grey 
+  height: 16px
+  width: 92px   
+  font-family: Roboto 
+  font-size: 12px 
+  font-weight: 500  
+  line-height: 16px
+  text-align: center
+  border-radius: 0px
+
+.img-upload
+  margin-right: 5px
+
+.upload-part
+  width: 48px !important
+  height: 48px
+  border: 1px solid #D6DBDE
+  padding-left: 8px
+  padding-right: 8px
+  box-shadow: none
+
+.upload-part span
+  color: rgba(0, 0, 0, 0.87) !important
+  padding: 10px
+
+.create-clientbtn
+  color: white
+  background-color: green
+  width: 130px
+  margin-top: 0px !important
+  float: right
+  margin-right: -30px
+
+.main-container hr
+  padding: 5px
+
+.graphsec
+  margin-top: 20px
+  border: 1px solid
+  border-color: #D6DBDE
+
+.date-range
+  margin-bottom: -15px !important
+
+.graphsec h1
+  font-size: 28px
+  font-family: Roboto
+  color: #494949
+  margin-top: 0px
+  margin-left: 0px
+  height: 40px
+  font-weight: 400
+
+
+.graphsec span
+  color: #9DA0A2
+  font-family: Roboto	
+  font-size: 12px	
+  font-weight: 500
+  line-height: 25px
+    
+.graphsec span p 
+  width: 188px
+  color: #494949
+  font-family: Roboto
+  font-size: 14px
+  line-height: 20px
+  margin-top: 10px
+
+.heading
+  background-color: #FFFFFF	
+  box-shadow: 0 0 7px 0 rgba(155,155,155,0.5)
+  margin: 0px !important
+
+.over-all-heading    
+  margin-top: -12px
+  margin-left: 15px
+  
+    
+.over-all-heading h3 
+  color: #494949
+  font-family: Roboto	
+  font-size: 18px	
+  line-height: 30px
+  
+    
+.over-all-heading span 
+  margin-left: 0
+  margin-top: -10px
+  display: block
+
+.content
+  background-color: #FFFFFF
+  box-shadow: 0 0 7px 0 rgba(155,155,155,0.5)
+  margin: 0px !important
+
+.graph-content
+  padding: 0px !important
+  background-color: #FFFFFF
+  box-shadow: 0 0 7px 0 rgba(155,155,155,0.5)
+
+.chat
+  height: 350px
+  box-shadow: 0 7px 3px -3px rgba(155,155,155,0.5)
+  margin: 0px !important
+
+.side-bar
+  padding: 0px !important
+  background-color: #FFFFFF
+  box-shadow: 0 0 7px 0 rgba(155,155,155,0.5)
+  .side-bar-header
+    padding: 0px !important
+    background-color: #FFFFFF
+    box-shadow: 0 0 7px 0 rgba(155,155,155,0.5)
+
+.right-form
+  padding: 0px !important
+  background-color: #FFFFFF
+  box-shadow: -7px 0 7px 0px rgba(155,155,155,0.5)
+
+.graphblock 
+  margin-top: 40px
+    
+.graphblock h3 
+  color: #494949
+  font-family: Roboto
+  font-size: 10.17px
+  font-weight: 900
+  line-height: 14px
+  text-align: center
+  margin-bottom: 20px
+    
+.col-md-3.br-lf 
+  position: relative
+  padding-bottom: 30px
+  min-width: 264px
+
+.mt-25 
+  margin-top: 40px
+    
+mat-label
+  color: #9DA0A2
+  font-family: Roboto 
+  font-size: 16px 
+  font-weight: 500
+  line-height: 1
+    
+.mat-form-field-appearance-standard .mat-form-field-flex 
+  padding-top: 0
+    
+.hr-st 
+  height: 35px  
+  color: #494949
+  font-family: Roboto 
+  font-size: 24px
+  line-height: 35px
+  text-decoration : underline
+  margin-bottom: 5px
+  display: block
+    
+.hr-st-two    
+  color: #494949  
+  font-family: Roboto
+  font-size: 16px
+  line-height: 20px
+    
+.mat-checkbox-layout .mat-checkbox-label 
+  line-height: 24px
+  font-weight: 400 !important
+    
+.mt-5 
+  margin-top: 50px
+    
+.mt-3 
+  margin-top: 20px
+  margin-bottom: 0px
+.mt-20 
+    margin-top: -10px
+.oval
+  border-bottom: 1px solid
+  border-color: #D6DBDE
+
+.mat-button
+  margin-top: 20px
+  padding: 0px
+
+.pen-icon
+  position: absolute
+  right: -40px
+  top: 0
+  height: 20px
+
+.btn-icon
+  margin-right: 5px
+  height: 20px
+  width: 20px
+    
+.mat-form-field-underline
+  height: 0 
+  
+.red-icon 
+  margin-top: -5px
+  margin-left: 5px
+
+.full-width-line
+  width: calc(100% + 32px)
+  margin-left: -16px
+
+.space-fix-vertical
+  width: 13px !important
+  padding: 0px !important
+  background: #FAFAFA !important
+
+.header-content
+  height: 100%
+  display: flex
+  flex-direction: row
+  justify-content: space-between
+  flex: 1
+  padding: 0px
+
+  .navigation-list 
+    display: inherit
+    align-items: flex-end
+    list-style-type: none
+    width: 340px
+    font-weight: 100
+    font-size: 14px
+    padding-left: 0px
+    margin-bottom: 0
+    margin-top: 23px
+
+    +mobile 
+      padding-left: 0px
+      width: auto
+      max-width: 240px
+
+    .page-action
+      height: 20px
+      color: #494949
+      line-height: 0px
+      font-family: Roboto	
+      font-size: 16px
+      text-align: center
+      flex: 1
+      width: 33%
+      max-width: 113px
+      padding: 0
+      text-align: center
+      cursor: pointer
+      user-select: none
+      text-transform: capitalize
+
+      &:focus
+        outline: none
+
+      +mobile 
+        width: 80px
+
+  .page-action-selected 
+    font-size: 16px
+    font-style: Roboto
+    font-weight: 900
+    line-height: 0px
+    color: #494949
+    height: 20px
+    flex: 1
+    width: 33%
+    max-width: 113px
+    padding: 0
+    text-align: center
+    cursor: pointer
+    user-select: none
+    text-transform: capitalize
+    border-bottom: 5px solid $bg-color-green
+    padding-bottom: 0px
+
+.month-text
+  color: #9DA0A2
+  font-family: Roboto	
+  font-size: 16px	
+  font-style: italic
+  line-height: 20px
+
+#showInsightFrom
+  .tabContent
+    margin-top: 10px
+  .margin-text
+    margin-top: 14px
+
+.verified-checkbox
+  margin-left: 10px
+
+.warn-text
+  color: #494949
+  font-family: Roboto
+  font-size: 16px
+  line-height: 20px
+  font-weight: 300px
+
+.tabContent
+  overflow: -moz-scrollbars-vertical
+  overflow-y: scroll
+  width: 100%
+  height: 331px
+
+.survey-text
+  color: #494949 !important
+  font-family: Roboto !important	
+  font-size: 16px !important	
+  font-weight: 500 !important	
+  line-height: 20px !important
+  margin-left: 16px !important
+
+.survey-text-margin
+  margin-top: 24px
+  margin-bottom: 16px !important
+  padding-left: 0px
+  .edit-icon
+    margin-top: 0px !important
+
+#showDocumentFrom
+  button
+    border: 1px solid #D6DBDE	
+    border-radius: 3px
+    background-color: #FFFFFF
+    width: 213px !important
+    height: 40px !important
+    margin-left: 16px
+    margin-bottom: 220px
+
+    span
+      color: #494949
+      font-family: Roboto	
+      font-size: 14px	
+      line-height: 20px
+
+#showScoreForm
+  margin-bottom: 207px
+  .subtext
+    margin-left: 20px
+
+#showDefaultForm ::ng-deep 
+  .mat-form-field-appearance-outline 
+    .mat-form-field-outline
+      top: 1.55em !important
+      
+#showDefaultForm ::ng-deep 
+  .mat-form-field-appearance-outline 
+    .mat-form-field-wrapper
+      margin: -0.7em 0 !important
+
+#showDataFrom ::ng-deep 
+  .mat-form-field-appearance-outline 
+    .mat-form-field-outline
+      top: 1.55em !important
+
+#showDefaultForm ::ng-deep ::ng-deep input.mat-input-element
+  margin-top: 0.7375em !important
+  font-weight: 400 !important
+
+#showDataFrom ::ng-deep ::ng-deep input.mat-input-element
+  margin-top: 0.7375em !important
+
+#showDefaultForm ::ng-deep .mat-select-trigger
+    height: 1.9em !important
+    top: 10px !important
+
+.scorebtngroup
+  float: right
+  margin-bottom: 253px

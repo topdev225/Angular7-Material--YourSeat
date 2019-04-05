@@ -1,0 +1,342 @@
+.comment-container {
+    padding-left: 10px;
+    border-left: 2px solid black;
+}
+
+.titleCover {
+    font-family: Roboto;
+    background-color: #0A9CDF;
+    padding: 5px 25px;
+}
+
+.dialogtitle {
+    color: #FFFFFF;
+    font-family: Roboto;
+    font-size: 28px;
+    padding: 18px 0px 0px 0px;
+    font-weight: 400;
+}
+
+.closeIcon {
+    float: right;
+    margin-top: -48px !important;
+    color: #fff !important;
+    cursor: pointer;
+}
+
+.initialCircle {
+    height: 65px;
+    background-color: #D6DBDE;
+    width: 65px;
+    border-radius: 50%;
+    margin-top: 15px
+}
+
+.initial {
+    color: #FFFFFF;
+    font-family: Roboto;
+    font-size: 24px;
+    line-height: 65px;
+    text-align: center;
+}
+
+.nameClass {
+    color: #494949;
+    font-family: Roboto;
+    font-size: 24px;
+    line-height: 30px;
+}
+
+.designationClass {
+    color: #9B9B9B;
+    font-family: Roboto;
+    font-size: 14px;
+    line-height: 20px;
+}
+
+.phoneClass {
+    color: #9B9B9B;
+    font-family: Roboto;
+    font-size: 14px;
+    line-height: 20px;
+}
+
+.emailClass {
+    color: #0A9CDF;
+    font-family: Roboto;
+    font-size: 14px;
+    line-height: 20px;
+    text-decoration: underline;
+    text-decoration-color: #0A9CDF;
+}
+
+.buttonContainer {
+    float: right;
+    margin-right: 15px;
+}
+
+.buttonText {
+    color: #6E7276;
+    font-family: Roboto;
+    font-size: 11px;
+    line-height: 15px;
+    text-align: center;
+    margin-top: -3px;
+}
+
+p {
+    margin: 0px 0px 3px 0px;
+}
+
+#buttonGroup .mat-raised-button:not([class*='mat-elevation-z']) {
+    box-shadow: 0px 3px 1px -2px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 1px 5px 0px rgba(0, 0, 0, 0.12);
+    border: 1px solid #D6DBDE;
+    border-radius: 3px;
+    background-color: #FFFFFF;
+    margin-top: 15px;
+    padding: 8px 2px;
+}
+
+#buttonGroup .mat-raised-button {
+    padding: 0px 2px !important;
+    min-width: 40px;
+}
+
+.mat-icon {
+    margin: -4px 8px 0px 0px;
+    font-size: 30px;
+    color: #0A9CDF;
+    cursor: pointer;
+}
+
+.full-width {
+    width: 100%;
+    margin-bottom: -5px;
+}
+
+.half-width {
+    width: 70%;
+    margin-bottom: -5px;
+}
+
+.labelClassForField {
+    color: #9DA0A2;
+    font-family: Roboto;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 16px;
+    width: 100%;
+}
+
+.UserPermissionClass {
+    margin: 10px 4px 20px;
+}
+
+.full-width {
+    width: calc(100% - 10px)
+}
+
+.mat-form-field-appearance-outline .mat-form-field-infix {
+    padding: 4px 0px 8px 0px !important;
+}
+
+.mat-dialog-content {
+    max-height: auto;
+}
+
+.mat-dialog-actions {
+    margin-bottom: 0px;
+    border-top: 1px solid rgba(0, 0, 0, 0.14);
+    box-shadow: 0px 0px 0px 0 rgba(0, 0, 0, 0.3);
+}
+
+.bottomFixed {
+    display: inline-block;
+    width: 100%;
+    padding: 15px 40px 10px;
+}
+
+.buttonClassSubmit {
+    float: right;
+    min-width: 130px;
+    height: 40px;
+}
+
+.radioLabelClass {
+    color: #494949;
+    font-family: Roboto;
+    font-size: 14px;
+    line-height: 20px;
+}
+
+.spanClass {
+    margin-left: 27px;
+    color: #9DA0A2;
+    font-family: Roboto;
+    font-size: 12px;
+    line-height: 20px;
+}
+
+.buttonClass {
+    height: 38px;
+    float: right;
+    padding: 0;
+    width: 153px;
+    font-family: Roboto;
+    border: 1px solid #D6DBDE;
+    border-radius: 3px;
+    /* background-color: #FFF; */
+    background: #fff;
+}
+
+.mat-button-ripple,
+.buttonClass:hover,
+.buttonClass:active,
+.buttonClass:focus {
+    /* background-color: #FFF; */
+    background: #fff !important;
+}
+
+.mat-icon {
+    margin: -8px 8px 0px 0px;
+    font-size: 30px;
+    color: #0A9CDF;
+    cursor: pointer;
+}
+
+::ng-deep mat-option:parent {
+    /* background-color: red;
+    font-size: 1.5em; */
+    margin-top: 37px !important;
+    margin-left: 0px !important;
+    box-shadow: none !important;
+    border: 1.2px solid rgba(0, 0, 0, 0.12) !important;
+    border-radius: 2px !important;
+}
+
+::ng-deep .cdk-overlay-pane {
+    margin-top: 42px !important;
+    margin-left: 15px !important;
+}
+
+::ng-deep .mat-option.mat-active {
+    background: lightblue !important;
+}
+
+::ng-deep .ng-trigger.ng-trigger-transformPanel.ng-tns-c15-5.mat-select-panel.mat-primary.ng-star-inserted,
+::ng-deep .mat-select-panel:not([class*='mat-elevation-z']) {
+    position: relative;
+    top: -18px;
+}
+
+::ng-deep .ng-trigger.ng-trigger-transformPanel.ng-tns-c7-13.mat-select-panel.mat-primary.ng-star-inserted,
+::ng-deep .ng-trigger.ng-trigger-transformPanel.ng-tns-c7-15.mat-select-panel.mat-primary.ng-star-inserted,
+::ng-deep .ng-trigger.ng-trigger-transformPanel.ng-tns-c7-14.mat-select-panel.mat-primary.ng-star-inserted,
+::ng-deep .ng-trigger.ng-trigger-transformPanel.ng-tns-c7-16.mat-select-panel.mat-primary.ng-star-inserted,
+::ng-deep .ng-trigger.ng-trigger-transformPanel.ng-tns-c7-17.mat-select-panel.mat-primary.ng-star-inserted,
+::ng-deep .ng-trigger.ng-trigger-transformPanel.ng-tns-c7-18.mat-select-panel.mat-primary.ng-star-inserted,
+::ng-deep .ng-trigger.ng-trigger-transformPanel.ng-tns-c7-19.mat-select-panel.mat-primary.ng-star-inserted,
+::ng-deep .ng-trigger.ng-trigger-transformPanel.ng-tns-c7-20.mat-select-panel.mat-primary.ng-star-inserted,
+::ng-deep .ng-trigger.ng-trigger-transformPanel.ng-tns-c7-21.mat-select-panel.mat-primary.ng-star-inserted {
+    left: -17px;
+}
+
+::ng-deep .mat-optgroup-label {
+    color: #494949;
+    font-family: Roboto;
+    font-size: 14px !important;
+    font-weight: 500 !important;
+    height: 30px !important;
+}
+
+::ng-deep .mat-option-text {
+    color: #6E7276;
+    font-family: Roboto;
+    font-size: 14px;
+}
+
+::ng-deep .mat-option {
+    font-size: inherit;
+    line-height: 3em;
+    height: 30px;
+}
+
+.buttonClassUpload {
+    height: 40px;
+    width: 200px;
+    border: 1px solid #D6DBDE;
+    border-radius: 3px;
+    background-color: #FFFFFF;
+    color: #494949;
+    font-family: Roboto;
+    font-size: 14px;
+    line-height: 20px;
+    margin-right: 25px;
+    display: inline-block;
+}
+
+.containerForProgress {
+    background-color: #F6F8FA;
+    min-height: 70px;
+    padding: 20px 20px 30px 20px;
+}
+
+.orDivClass {
+    height: 30px;
+}
+
+.leftlineClass {
+    height: 2px;
+    width: 120px;
+    max-width: 40%;
+    float: left;
+    border: 1px solid #9B9B9B;
+    margin-right: 30px;
+}
+
+.rightLineClass {
+    height: 2px;
+    width: 120px;
+    max-width: 40%;
+    float: right;
+    border: 1px solid #9B9B9B;
+    margin-right: 30px;
+}
+
+.img-upload {
+    float: left;
+    padding: 8px 4px 8px 30px;
+}
+
+.orClass {
+    float: inherit;
+    display: table-caption;
+    /* margin-top: -10px; */
+    /* margin-bottom: 10px; */
+    margin: -9px 0px;
+}
+
+input[type="file"] {
+    display: none;
+}
+
+.custom-file-upload {
+    border: 1px solid #ccc;
+    display: inline-block;
+    padding: 6px 12px;
+    cursor: pointer;
+}
+
+.laeblforButton {
+    display: block;
+    margin: 10px 65px 10px 10px;
+    cursor: pointer;
+    float: right;
+}
+
+#uploadbelow .mat-icon {
+    margin: 4px 140px 0px 0px;
+    font-size: 30px;
+    color: #0A9CDF;
+    cursor: pointer;
+}

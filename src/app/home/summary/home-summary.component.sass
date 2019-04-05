@@ -1,0 +1,627 @@
+@import '../../shared/styles/variables.sass'
+@import '../../shared/styles/common.sass'
+@import '../../shared/styles/mixins.sass'
+
+.home-summary-component
+  background-color: $bg-color-grey
+  padding-top: 0px
+  padding-bottom: 400px
+  height: calc(100vh - 128px)
+
+  .main-container
+    width: 1110px
+    margin: 25px auto
+
+    +tablet
+      width: 100%
+
+.home-summary-size-small 
+  min-height: calc(100vh - 112px - 6vh) !important
+
+.home-summary-padding 
+  padding-left: 7vw
+  padding-right: 7vw
+
+.selects-container
+  width: 905px
+  margin-bottom: 24px !important
+
+  +smallTablet 
+    width: 70%
+
+  +mobile 
+    width: 55%
+
+.search-container
+  display: flex
+  flex-direction: row
+  justify-content: space-between
+  align-items: center
+  border-bottom: 1px solid
+  border-color: #D6DBDE
+  margin-bottom: 24px
+  
+  +tablet 
+    padding: 0 30px
+
+  +mobile 
+    padding: 0 20px
+
+  .search-button-container
+    .mat-btn-search
+      width: 160px
+      height: 40px
+      padding: 8px 42.5px
+      background: $bg-color-green
+      border-radius: 3px
+      line-height: 14px
+      margin-bottom: 24px
+
+      img 
+        width: 21px
+        height: 21px
+
+      span 
+        font-size: 14px
+        font-weight: 300
+        line-height: 20px
+        color: $bg-color-light-grey
+        padding-left: 6px
+        letter-spacing: 0.5px
+
+.select-wrapper
+  display: flex
+  flex-direction: column
+  padding-right: 30px
+
+  // +tablet
+  //   padding: 0 30px
+
+  +mobile
+    width: 100%
+    // margin-bottom: 25px
+    padding: 0
+
+  select 
+    padding: 0 8px
+    background: #fff url('/assets/images/DropDownIcon.svg') no-repeat
+    background-size: 16px
+    background-position: right 10px center
+    -webkit-appearance: none
+    -moz-appearance: none
+    border: 1px solid $bg-color-grey-tidy-grey
+
+::ng-deep .multiselect-dropdown
+  .dropdown-btn
+    border: none !important
+    .dropdown-down
+      display: none !important
+    .dropdown-up
+      display: none !important
+    .ng-star-inserted
+      padding-right: 20px !important
+      color: #ffffff !important
+    .selected-item
+      background: #0A9CDF !important
+  .dropup-btn
+    border: none !important
+
+::ng-deep .multiselect-item-checkbox[_ngcontent-c7] input[type=checkbox][_ngcontent-c7] + div[_ngcontent-c7]:before
+  color: #0A9CDF !important
+  border: 2px solid #0A9CDF !important
+
+::ng-deep .multiselect-item-checkbox[_ngcontent-c7] input[type=checkbox][_ngcontent-c7]:checked + div[_ngcontent-c7]:before
+  background: #0A9CDF !important
+
+::ng-deep .multiselect-item-checkbox[_ngcontent-c7] input[type=checkbox][_ngcontent-c7] + div[_ngcontent-c7]:before
+  color: #0A9CDF !important
+  border: 2px solid #0A9CDF !important
+
+::ng-deep .multiselect-dropdown
+  padding: 0px !important
+  background: #fff url('/assets/images/DropDownIcon.svg') no-repeat
+  background-size: 16px
+  background-position: right 10px center
+  -webkit-appearance: none
+  -moz-appearance: none
+  border: 1px solid $bg-color-grey-tidy-grey
+  
+.advanced-option 
+  text-align: end
+
+.advanced-option-button 
+  color: #007bff
+  cursor: pointer
+  background: none
+  border: none
+
+.section-text 
+  height: 16px
+  width: 380px
+  color: #9DA0A2
+  font-family: Roboto
+  font-size: 12px
+  font-weight: 400
+  line-height: 16px
+  margin-bottom: 5px
+
+.date-range
+  margin-bottom: 10px !important
+  margin-left: 20px !important
+  margin-top: 8px !important
+  color: #9DA0A2 !important
+  font-family: Roboto	!important
+  font-size: 12px	!important
+  font-weight: 500 !important	
+  line-height: 14px !important
+ 
+.button-group
+  margin: auto
+  margin-left: 5px !important
+  margin-top: 5px !important
+
+.client-picture 
+  height: 70%
+  width: 100%
+  object-fit: cover /*magic*/
+  alignment: center
+  display: block
+  margin: auto
+
+.text 
+  color: #9B9B9B !important
+
+.year-text 
+  color: black
+
+
+.recommended-programs-text 
+  text-decoration: underline
+
+
+.recommended-programs-list 
+  padding: 0
+  list-style-type: none
+
+
+.recomended-program-link 
+  color: #0a9cdf
+  cursor: pointer
+
+.select-programs 
+    width: 445px !important
+
+.select-client
+    width: 445px !important
+
+.client-card 
+  padding-top: 60px
+  margin-left: 0px
+  margin-right: 0px
+
+.no-client-card 
+  padding-top: 107px
+  padding-bottom: 244px
+  margin: 48px 0px
+  text-align: center
+  border-radius: 0
+  border: 1px solid #d6dbde
+  box-shadow: none
+
+  +tablet
+    margin: 35px 30px
+    padding-bottom: 144px
+
+  +mobile 
+    margin: 35px 20px
+    padding-bottom: 144px
+
+  img.img-no-client
+    max-width: 300px
+
+  .text-no-client
+    margin: 0 auto
+    margin-top: 45px
+    font-size: 28px
+    line-height: 40px
+    font-weight: 300
+    letter-spacing: normal
+    color: $font-color-green-grey
+
+
+.card-left-side 
+  padding-left: 57px
+  color: #9B9B9B !important
+
+
+.card-right-side 
+  /*padding-left: 80px*/
+  padding-right: 60px
+
+
+.list-element 
+  margin: 500px
+
+
+.block 
+  display: block
+
+
+.client-select 
+  width: 445px
+  height: 31.87px !important
+  font-size: 14px
+  background-color: #ffffff
+  border: 1px solid #D6DBDE
+  border-radius: 3px
+
+
+  +tablet
+    width: 400px
+
+  +mobile
+    width: 200px
+
+.client-name 
+  font-size: 1.5rem
+  color: black
+
+// .client-select 
+//   ::ng-deep .mat-select-placeholder
+//     color: #494949
+//     font-family: Roboto	
+//     font-size: 14px
+//     line-height: 30px
+//     padding-left: 8px
+
+// .program-select 
+//   ::ng-deep .mat-select-placeholder
+//     color: #494949
+//     font-family: Roboto	
+//     font-size: 14px
+//     line-height: 30px
+//     padding-left: 8px
+
+// ::ng-deep .ng-trigger-transformPanel
+//   min-width: 100% !important
+//   margin-top: 37px !important
+//   margin-left: 40px !important
+
+// ::ng-deep .mat-select-value-text
+//   color: #494949	
+//   font-family: Roboto	
+//   font-size: 14px	
+//   line-height: 30px
+//   padding-left: 8px
+
+// ::ng-deep .mat-option.mat-active 
+//   background: lightblue !important
+
+.program-select 
+  width: 380px
+  height: 31.87px
+  font-size: 14px
+  color: #494949 !important
+  background-color: #ffffff
+  border: 1px solid #D6DBDE
+  border-radius: 3px
+  
+  +tablet
+    width: 400px
+
+  +mobile
+    width: 200px   
+
+.client-select
+  width: 350px
+  height: 35px
+  font-size: 14px
+  color: #494949 !important
+  background-color: #ffffff
+  box-shadow: none !important
+
+  +tablet
+    width: 400px
+
+  +mobile
+    width: 200px   
+
+.agency-select 
+  width: 540px
+  height: 35px
+  font-size: 14px
+  color: #494949 !important
+  box-shadow: none !important
+
+
+.county-select 
+  width: 540px
+  height: 35px
+  font-size: 14px
+  color: #494949 !important
+  box-shadow: none !important
+
+.dayBtn, .button-30
+	float: left
+
+.dayBtn button, .button-30 button
+  width: 124px !important
+  height: 34px !important
+  border: 1px solid $bg-color-grey-tidy-grey 
+  height: 16px
+  color: #494949	
+  font-family: Roboto	
+  font-size: 12px	
+  font-weight: 500	
+  line-height: 16px
+  text-align: center
+  box-shadow: none
+  margin-right: 10px
+
+.button-30 button 
+	width: 124px
+  height: 32px
+  float: left
+	border: 1px solid #39CB76
+	border-radius: 3px
+	background-color: rgba(57,203,118,0.1)
+
+.button-30 span
+  height: 20px !important
+  width: 124px !important	
+  color: #39CB76 !important
+  font-family: Roboto	!important
+  font-size: 12px	!important
+  line-height: 20px	!important
+  text-align: center !important
+
+.dayBtn span
+  height: 20px !important
+  width: 124px !important	
+  color: #494949 !important	
+  font-family: Roboto !important	
+  font-size: 12px !important	
+  line-height: 20px !important
+  text-align: center !important
+
+.no-client-card
+  height: 886px !important
+  padding: 0px
+  margin: 0px
+
+/* enable absolute positioning */
+.inner-addon 
+  position: relative
+
+
+/* style icon */
+.inner-addon .glyphicon 
+  position: absolute
+  padding: 10px
+  pointer-events: none
+
+
+/* align icon */
+.left-addon .glyphicon 
+  left: 0px
+
+
+.right-addon .glyphicon 
+  right: 0px
+
+
+/* add padding  */
+.left-addon input 
+  padding-left: 30px
+
+
+.right-addon input 
+  padding-right: 30px
+
+
+/*Timeline CSS code*/
+
+ul.timeline 
+  list-style-type: none
+  position: relative
+
+
+ul.timeline:before 
+  content: ' '
+  background: #d4d9df
+  display: inline-block
+  position: absolute
+  left: 29px
+  width: 2px
+  height: 100%
+  z-index: 400
+
+
+ul.timeline > li 
+  margin: 20px 0
+  padding-left: 20px
+
+
+ul.timeline > li:before 
+  content: ' '
+  /* background: white */
+  display: inline-block
+  position: absolute
+  border-radius: 50%
+  /* border: 3px solid #22c0e8 */
+  left: 20px
+  width: 20px
+  height: 20px
+  z-index: 400
+
+
+ul.timeline > li.timeline-success:before 
+  content: ' '
+  background: #c3e6cb
+  display: inline-block
+  position: absolute
+  border-radius: 50%
+  border: 3px solid #c3e6cb
+  left: 20px
+  width: 20px
+  height: 20px
+  z-index: 400
+
+
+ul.timeline > li.timeline-failure:before 
+  content: ' '
+  background: #f8d7da
+  display: inline-block
+  position: absolute
+  border-radius: 50%
+  border: 3px solid #f8d7da
+  left: 20px
+  width: 20px
+  height: 20px
+  z-index: 400
+
+
+/* Date range picker styles*/
+.custom-day 
+  text-align: center
+  padding: 0.185rem 0.25rem
+  display: inline-block
+  height: 2rem
+  width: 2rem
+
+
+.custom-day.focused 
+  background-color: #e6e6e6
+
+
+.custom-day.range, .custom-day:hover 
+  background-color: rgb(2, 117, 216)
+  color: white
+
+
+.custom-day.faded 
+  background-color: rgba(2, 117, 216, 0.5)
+
+
+.form-control + button 
+  position: absolute
+  right: 20px
+  border: 0
+  background-color: transparent
+  box-shadow: none
+
+.main-container hr
+  padding: 6px
+
+.graphsec
+  border: 1px solid
+  border-color: #D6DBDE
+  height: 632px
+  box-shadow: none
+
+.graphsec h1
+  font-size: 28px
+  font-family: Roboto
+  color: #494949
+  margin-top: 0px
+  margin-left: 5px
+  font-weight: 400
+
+.mat-card
+  padding-top: 0px !important
+
+.graphsec .header-text
+  border-bottom: 1px solid
+  border-color: #D6DBDE
+  padding-bottom: 15px
+  box-shadow: 0 0 7px 0 rgba(155,155,155,0.5)
+
+.graphsec .lstdays
+  padding: 0px
+  margin-top: 20px
+
+.graphsec span
+  color: #9DA0A2	
+  font-family: Roboto	
+  font-size: 18px	
+  line-height: 24px
+  margin-left: 5px
+  font-weight: 300
+
+.graphsec .sub-header-text
+  margin-top: 16px
+  margin-bottom: 8px
+
+.mat-raised-button
+  line-height: 40px !important
+
+.graphsec .lockdiv
+  padding-right: 25px
+  margin-top: 30px
+  margin-bottom: 8px
+
+.days-message
+  font-size: 14px !important
+  margin-top: 20px
+  
+.graphsec .lockbtn
+  width: 78px
+  height: 55px
+  border: 1px solid #D6DBDE
+  padding-left: 0px
+  padding-right: 0px
+  box-shadow: none
+
+.graphsec .lockbtn .lock-icon
+  margin-bottom: 15px
+
+.graphsec .lockbtn span
+  display: block
+  color: #6E7276	
+  font-family: Roboto	
+  font-size: 11px	
+  line-height: 10px	
+  text-align: center
+  margin-top: -9px
+
+.gobtn
+  width: 1062px
+  height: 56px
+  background-color: #fce7ec
+  border: 1px solid #E50B3E
+  border-radius: 3px
+  color: #A0082B
+  padding: 8px 8px 11px 3px
+  margin-bottom: 50px
+  margin-top: 32px
+  margin-left: -10px
+  text-align: center
+  box-shadow: none
+
+.gobtn span
+  color: #A0082B	
+  font-family: Roboto	
+  font-size: 14px	!important
+  line-height: 42px
+
+
+.gobtn .left
+  margin: 8px
+  float: left
+
+.gobtn .right
+  margin: 8px
+  float: right
+
+.graphblock
+  padding: 0px
+
+.graphblock h3
+  font-family: Roboto 
+  color: #494949
+  font-size: 16px	
+  font-weight: 900	
+  line-height: 21px	
+  text-align: center
+  margin-top: 0px
+  margin-bottom: 45px

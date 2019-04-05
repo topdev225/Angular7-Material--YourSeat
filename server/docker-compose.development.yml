@@ -1,0 +1,38 @@
+version: '3'
+services:
+  web:    
+    container_name: server_web_1
+    build:
+      context: .
+      dockerfile: ./dockerfiles/application
+    command: ["./build/wait-for-postgres.sh", "postgres", "npm", "run", "start:app:dev"]
+    volumes:
+      - .:/usr/app/
+      # - /usr/app/node_modules
+    ports:
+      - "8080:3000"
+    depends_on:
+      - postgres
+    environment:
+      NODE_ENV: development
+      DATABASE_URL: postgres://root@postgres/public
+      DATABASE_PORT: 5432
+      TYPEORM_CONNECTION: postgres
+      TYPEORM_HOST: postgres
+      TYPEORM_USERNAME: root
+      TYPEORM_PASSWORD: root
+      TYPEORM_DATABASE: public
+      TYPEORM_ENTITIES: src/core/model/entities/*.entity.ts
+      TYPEORM_ENTITIES_DIR: src/core/entities
+      TYPEORM_MIGRATIONS: src/migrations/*.ts
+      TYPEORM_MIGRATIONS_DIR: src/migrations
+      TYPEORM_SUBSCRIBERS: src/subscriber/*.ts
+      TYPEORM_SUBSCRIBERS_DIR: src/subscriber
+      JWT_SECRET: 'SECRET'
+  postgres:
+    image: postgres:9.6.2-alpine
+    environment:
+      POSTGRES_DB: public
+      POSTGRES_USER: root    
+    ports:
+      - "5433:5432"
